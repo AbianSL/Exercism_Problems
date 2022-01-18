@@ -1,0 +1,4 @@
+/home/tara/Escritorio/Programming/Exercism_Problems/cpp/robot-simulator/build/CMakeFiles/rebuild_cache.dir
+/home/tara/Escritorio/Programming/Exercism_Problems/cpp/robot-simulator/build/CMakeFiles/edit_cache.dir
+/home/tara/Escritorio/Programming/Exercism_Problems/cpp/robot-simulator/build/CMakeFiles/test_robot-simulator.dir
+/home/tara/Escritorio/Programming/Exercism_Problems/cpp/robot-simulator/build/CMakeFiles/robot-simulator.dir

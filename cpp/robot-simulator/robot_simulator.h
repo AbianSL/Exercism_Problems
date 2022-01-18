@@ -19,6 +19,8 @@ namespace robot_simulator {
     Bearing get_bearing() const { return bearing_; }
     void turn_right();
     void turn_left();
+    void advance();
+    void execute_sequence(const std::string& kPhraseIntroduced);
    private:
     std::pair<int, int> position_;
     Bearing bearing_;

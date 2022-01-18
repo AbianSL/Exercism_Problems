@@ -56,7 +56,6 @@ TEST_CASE("Changes_the_direction_from_east_to_south")
     REQUIRE(Bearing::SOUTH == r.get_bearing());
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
 TEST_CASE("Changes_the_direction_from_south_to_west")
 {
     const std::pair<int, int> robot_position{0, 0};
@@ -187,6 +186,7 @@ TEST_CASE("Decreases_the_x_coordinate_by_one_when_facing_west")
     REQUIRE(Bearing::WEST == r.get_bearing());
 }
 
+#if defined(EXERCISM_RUN_ALL_TESTS)
 TEST_CASE("Instructions_to_move_east_and_north_from_readme")
 {
     const std::pair<int, int> robot_position{7, 3};
