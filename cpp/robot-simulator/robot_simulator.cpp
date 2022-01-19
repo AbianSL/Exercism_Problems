@@ -70,8 +70,8 @@ namespace robot_simulator {
   }
 
   void Robot::execute_sequence(const std::string& kPhraseIntroduced) {
-    for (size_t counter {0}; counter < kPhraseIntroduced.length(); ++counter) {
-      switch (kPhraseIntroduced[counter]) {
+    for (char counter : kPhraseIntroduced) {
+      switch (counter) {
       case 'L':
         turn_left();
         break;
