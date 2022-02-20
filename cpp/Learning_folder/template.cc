@@ -1,8 +1,16 @@
 #include <iostream>
 #include <string>
 
+/**
+ * The style google of c++ say that the templates (typename) should use only if it will do the code more clearly and safer
+ * but, if it only of the inconvenience of wreinting an explicit type
+ * 
+ * On the other hand, templates (class) are be use only if the team is agree or the maintainers have opted into supporting it.
+ * on other case it will be not use.  
+ */
+
 /// temaplate is for only use one function instead two or more function
-template<typename T> /// common it call T
+template <typename T> /// common it call T
 
 void Print(T value) {
   std::cout << value << std::endl;
