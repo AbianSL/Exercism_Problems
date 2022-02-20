@@ -31,10 +31,22 @@ void Print(T value) {
  * }
 */
 
+template <typename R,int N>
+class Array {
+ public:
+  int GetSize() const { return N; }
+ private:
+  R m_Array_[N];
+};
+
 int main() {
   Print<int>(2);  /// it put in brckets the type to specify the type
   Print<std::string>("hello");
   Print<float>(2.5f);
+
+  /// Template class
+  Array<std::string, 5> array;
+  std::cout << array.GetSize() << std::endl;
 
   return 0;
 }
