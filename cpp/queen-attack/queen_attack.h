@@ -1,8 +1,6 @@
 #if !defined(QUEEN_ATTACK_H)
 #define QUEEN_ATTACK_H
 
-#include <tuple>
-
 namespace queen_attack {
   class Piece {
    public:

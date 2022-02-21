@@ -1,4 +1,4 @@
-/home/tara/Escritorio/Programming/Exercism_Problems/cpp/queen-attack/build/CMakeFiles/edit_cache.dir
-/home/tara/Escritorio/Programming/Exercism_Problems/cpp/queen-attack/build/CMakeFiles/test_queen-attack.dir
-/home/tara/Escritorio/Programming/Exercism_Problems/cpp/queen-attack/build/CMakeFiles/rebuild_cache.dir
-/home/tara/Escritorio/Programming/Exercism_Problems/cpp/queen-attack/build/CMakeFiles/queen-attack.dir
+/home/usuario/snap/exercism/5/exercism/cpp/Exercism_Problems/cpp/queen-attack/build/CMakeFiles/edit_cache.dir
+/home/usuario/snap/exercism/5/exercism/cpp/Exercism_Problems/cpp/queen-attack/build/CMakeFiles/test_queen-attack.dir
+/home/usuario/snap/exercism/5/exercism/cpp/Exercism_Problems/cpp/queen-attack/build/CMakeFiles/rebuild_cache.dir
+/home/usuario/snap/exercism/5/exercism/cpp/Exercism_Problems/cpp/queen-attack/build/CMakeFiles/queen-attack.dir
