@@ -1,0 +1,4 @@
+/home/usuario/snap/exercism/5/exercism/cpp/Exercism_Problems/cpp/rna-transcription/build/CMakeFiles/rebuild_cache.dir
+/home/usuario/snap/exercism/5/exercism/cpp/Exercism_Problems/cpp/rna-transcription/build/CMakeFiles/edit_cache.dir
+/home/usuario/snap/exercism/5/exercism/cpp/Exercism_Problems/cpp/rna-transcription/build/CMakeFiles/test_rna-transcription.dir
+/home/usuario/snap/exercism/5/exercism/cpp/Exercism_Problems/cpp/rna-transcription/build/CMakeFiles/rna-transcription.dir
