@@ -1,6 +1,8 @@
 #if !defined(QUEEN_ATTACK_H)
 #define QUEEN_ATTACK_H
 
+#include <iostream>
+
 namespace queen_attack {
   class Piece {
    public:

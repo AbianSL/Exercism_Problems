@@ -32,8 +32,8 @@ TEST_CASE("queen_positions_must_be_distinct")
     const auto pos = std::make_pair(3, 7);
     REQUIRE_THROWS_AS((queen_attack::chess_board{pos, pos}), std::domain_error);
 }
-
 #if defined(EXERCISM_RUN_ALL_TESTS)
+
 TEST_CASE("string_representation")
 {
     const queen_attack::chess_board board{std::make_pair(2, 4), std::make_pair(6, 6)};

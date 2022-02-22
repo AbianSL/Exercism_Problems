@@ -6,23 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/usuario/snap/exercism/5/exercism/cpp/Exercism_Problems/cpp/queen-attack/queen_attack.cpp
-queen_attack.h
-/home/usuario/snap/exercism/5/exercism/cpp/Exercism_Problems/cpp/queen-attack/queen_attack.h
+/home/tara/Escritorio/Programming/Exercism_Problems/cpp/queen-attack/queen_attack.h
 iostream
 -
 
-/home/usuario/snap/exercism/5/exercism/cpp/Exercism_Problems/cpp/queen-attack/queen_attack.h
-
-/home/usuario/snap/exercism/5/exercism/cpp/Exercism_Problems/cpp/queen-attack/queen_attack_test.cpp
+/home/tara/Escritorio/Programming/Exercism_Problems/cpp/queen-attack/queen_attack_test.cpp
 queen_attack.h
-/home/usuario/snap/exercism/5/exercism/cpp/Exercism_Problems/cpp/queen-attack/queen_attack.h
+/home/tara/Escritorio/Programming/Exercism_Problems/cpp/queen-attack/queen_attack.h
 catch2/catch.hpp
 -
 test/catch.hpp
-/home/usuario/snap/exercism/5/exercism/cpp/Exercism_Problems/cpp/queen-attack/test/catch.hpp
+/home/tara/Escritorio/Programming/Exercism_Problems/cpp/queen-attack/test/catch.hpp
 
-/home/usuario/snap/exercism/5/exercism/cpp/Exercism_Problems/cpp/queen-attack/test/catch.hpp
+/home/tara/Escritorio/Programming/Exercism_Problems/cpp/queen-attack/test/catch.hpp
 TargetConditionals.h
 -
 cstddef
@@ -400,7 +396,7 @@ string
 memory
 -
 Foundation/Foundation.h
-/home/usuario/snap/exercism/5/exercism/cpp/Exercism_Problems/cpp/queen-attack/test/Foundation/Foundation.h
+/home/tara/Escritorio/Programming/Exercism_Problems/cpp/queen-attack/test/Foundation/Foundation.h
 algorithm
 -
 signal.h
@@ -609,8 +605,4 @@ algorithm
 -
 cassert
 -
-
-/home/usuario/snap/exercism/5/exercism/cpp/Exercism_Problems/cpp/queen-attack/test/tests-main.cpp
-catch.hpp
-/home/usuario/snap/exercism/5/exercism/cpp/Exercism_Problems/cpp/queen-attack/test/catch.hpp
 
