@@ -4,7 +4,8 @@
 #include <string>
 
 namespace rna_transcription {
-  std::string to_rna(const std::string kLetter);
+  char to_rna(const char kLetter);
+  std::string to_rna(const std::string kPhrase);
 }  // namespace rna_transcription
 
 #endif // RNA_TRANSCRIPTION_H
