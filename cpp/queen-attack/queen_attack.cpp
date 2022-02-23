@@ -3,10 +3,16 @@
 #include "queen_attack.h"
 
 namespace queen_attack {
+  /**
+   * @brief that function calculate if the black piece are in the line of white piece
+   * 
+   * @return true queen attack the black piece
+   * @return false queen don´t attack the black piece
+   */
   bool chess_board::can_attack() const {
     int distance_first_coordinate {std::abs(white_piece_.second_coordinate() - Black_piece_.second_coordinate())};
     int distance_second_coordinate {std::abs(white_piece_.first_coordinate() - Black_piece_.first_coordinate())};
-    return ((distance_first_coordinate == distance_second_coordinate) || (distance_first_coordinate == 0) || (distance_second_coordinate == 0)) ?  1 : 0;
+    return ((distance_first_coordinate == distance_second_coordinate) || (distance_first_coordinate == 0) || (distance_second_coordinate == 0)) ?  1 : 0;  
   }
 
   /**
@@ -26,9 +32,9 @@ namespace queen_attack {
           output_of_string += "_";
         } 
         if (j != 7) {
-          output_of_string += " ";
+          output_of_string += " ";  /// that put a space
         } else {
-          output_of_string += "\n";
+          output_of_string += "\n"; /// that is for know if it is a blank line 
         }
       }
     }
