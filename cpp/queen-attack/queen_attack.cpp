@@ -3,8 +3,10 @@
 #include "queen_attack.h"
 
 namespace queen_attack {
-  bool chess_board::can_attack() {
-    return () ? 1 : 0
+  bool chess_board::can_attack() const {
+    size_t distance_first_coordinate {abs(white_piece_.second_coordinate() - Black_piece_.second_coordinate())};
+    size_t distance_second_coordinate {abs(white_piece_.first_coordinate() - Black_piece_.first_coordinate())};
+    return ((distance_first_coordinate == distance_second_coordinate) || (distance_first_coordinate == 0) || (distance_second_coordinate == 0)) ?  1 : 0;
   }
 
   /**
