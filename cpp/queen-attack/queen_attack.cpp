@@ -1,7 +1,17 @@
+#include <cmath>
+
 #include "queen_attack.h"
 
 namespace queen_attack {
+  bool chess_board::can_attack() {
+    return () ? 1 : 0
+  }
 
+  /**
+   * @brief is the operator to transfor the class to string
+   * 
+   * @return std::string is the string created
+   */
   chess_board::operator std::string() const {
     std::string output_of_string;
     for (int i{0}; i < 8; ++i) {

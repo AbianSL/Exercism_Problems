@@ -22,9 +22,9 @@ namespace queen_attack {
     chess_board(const std::pair<int,int>& kWhitePiece, const std::pair<int,int>& kBlackPiece);  /// constructor with argument
     std::pair<int,int> white() const { return std::make_pair(white_piece_.first_coordinate(), white_piece_.second_coordinate()); }  /// getter
     std::pair<int,int> black() const { return std::make_pair(Black_piece_.first_coordinate(), Black_piece_.second_coordinate()); }  /// getter
+    bool can_attack() const;
     operator std::string() const;
    private:
-    std::string ConstructorOfBoard() const;
     Piece white_piece_;
     Piece Black_piece_;
   };
