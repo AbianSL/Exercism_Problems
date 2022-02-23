@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/usuario/snap/exercism/5/exercism/cpp/Exercism_Problems/cpp/queen-attack/queen_attack.cpp
-queen_attack.h
-/home/usuario/snap/exercism/5/exercism/cpp/Exercism_Problems/cpp/queen-attack/queen_attack.h
-
 /home/usuario/snap/exercism/5/exercism/cpp/Exercism_Problems/cpp/queen-attack/queen_attack.h
 iostream
 -
