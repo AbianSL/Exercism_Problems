@@ -2,16 +2,7 @@
 
 namespace queen_attack {
 
-  chess_board::operator std::string() {
-    
-  }
-
-  /**
-   * @brief is the function to create the graphic board
-   * 
-   * @return std::string is the string of the board
-   */
-  std::string chess_board::ConstructorOfBoard() const{
+  chess_board::operator std::string() const {
     std::string output_of_string;
     for (int i{0}; i < 8; ++i) {
       for (int j{0}; j < 8; ++j) {
