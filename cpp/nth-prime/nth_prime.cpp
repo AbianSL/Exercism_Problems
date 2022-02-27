@@ -9,11 +9,12 @@ namespace nth_prime {
       throw std::domain_error("the number introduced must not be 0");
     }
     std::vector<unsigned int> prime_numebers{2,3,5};
-    for (unsigned int counter{7};prime_numebers.size() != kNumberIntroduced; ++counter) {
-      for(size_t counter_for_vector{0}; counter_for_vector <= prime_numebers.size(); ++counter_for_vector) {
-        if ((counter % prime_numebers[counter_for_vector] )== 0) {
-          prime_numebers.push_back(counter);
+    for (int counter{7};prime_numebers.size() < kNumberIntroduced; ++counter) {
+      for(size_t counter_for_vector{0}; counter_for_vector < prime_numebers.size(); ++counter_for_vector) {
+        if ((counter % prime_numebers[counter_for_vector] ) == 0) {
           break;
+        } else if (counter_for_vector  == (prime_numebers.size() - 1)) {
+          prime_numebers.push_back(counter);
         }
       }
     }
