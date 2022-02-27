@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tara/Escritorio/Programming/Exercism_Problems/cpp/nth-prime/nth_prime.cpp
+nth_prime.h
+/home/tara/Escritorio/Programming/Exercism_Problems/cpp/nth-prime/nth_prime.h
+vector
+-
+iostream
+-
+
+/home/tara/Escritorio/Programming/Exercism_Problems/cpp/nth-prime/nth_prime.h
+

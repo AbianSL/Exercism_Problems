@@ -1,0 +1,4 @@
+/home/tara/Escritorio/Programming/Exercism_Problems/cpp/nth-prime/build/CMakeFiles/rebuild_cache.dir
+/home/tara/Escritorio/Programming/Exercism_Problems/cpp/nth-prime/build/CMakeFiles/test_nth-prime.dir
+/home/tara/Escritorio/Programming/Exercism_Problems/cpp/nth-prime/build/CMakeFiles/edit_cache.dir
+/home/tara/Escritorio/Programming/Exercism_Problems/cpp/nth-prime/build/CMakeFiles/nth-prime.dir
