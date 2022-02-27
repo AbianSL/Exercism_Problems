@@ -30,4 +30,3 @@ TEST_CASE("weird_case")
 {
     REQUIRE_THROWS_AS(nth_prime::nth(0), std::domain_error);
 }
-
