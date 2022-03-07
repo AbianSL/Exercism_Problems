@@ -4,7 +4,7 @@
 namespace space_age {
   class space_age{
    public:
-    space_age(const int kNumberIntroduced) :  seconds_{kNumberIntroduced} {} 
+    space_age(const unsigned long kNumberIntroduced) :  seconds_{kNumberIntroduced} {} 
     /// getters
     double on_earth() const;
     double on_venus() const;
@@ -14,9 +14,9 @@ namespace space_age {
     double on_saturn() const;
     double on_uranus() const;
     double on_neptune() const;
-    int seconds() const { return seconds_; }
+    unsigned long seconds() const { return seconds_; }
    private:
-    int seconds_;
+    unsigned long seconds_;
   };
   
 }  // namespace space_age
