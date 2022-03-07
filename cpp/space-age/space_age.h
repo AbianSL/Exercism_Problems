@@ -6,6 +6,7 @@ namespace space_age {
    public:
     space_age(const int kNumberIntroduced) :  seconds_{kNumberIntroduced} {} 
     /// getters
+    double on_earth() const;
     int seconds() const { return seconds_; }
    private:
     int seconds_;
