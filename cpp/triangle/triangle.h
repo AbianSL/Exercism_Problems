@@ -7,6 +7,6 @@ namespace triangle {
     isosceles,
     scalene
   };
-  flavor kind(const int, const int, const int);
+  flavor kind(const double, const double, const double);
 }
 #endif // TRIANGLE_H
