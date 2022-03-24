@@ -595,12 +595,12 @@ cassert
 -
 
 /home/usuario/Curso/Exercism_Problems/cpp/triangle/triangle.cpp
+iostream
+-
 triangle.h
 /home/usuario/Curso/Exercism_Problems/cpp/triangle/triangle.h
 
 /home/usuario/Curso/Exercism_Problems/cpp/triangle/triangle.h
-iostream
--
 
 /home/usuario/Curso/Exercism_Problems/cpp/triangle/triangle_test.cpp
 triangle.h

@@ -1,25 +1,17 @@
+#include <iostream>
+
 #include "triangle.h"
 
 namespace triangle {
-  enum flavor{
-    equilateral,
-    isosceles,
-    scalene
-  }
-   flavor kind(const int kFirst, const int kSecond, const int kThird) {
+  triangle::flavor triangle::kind(const int kFirst, const int kSecond, const int kThird) {
     if ((kFirst == kSecond) && (kSecond == kThird)) {
-      return  equilateral;
+      return equilateral;
+    } else if ((kFirst == kSecond)) {
+      return isosceles; 
+    } else if ((kFirst <= 0) || (kSecond <= 0) || (kThird <= 0)) {
+      throw std::domain_error("Invalid Triangle");
+    } else {
+      return scalene;
     }
-
-    switch () {
-      case :
-          
-        break;
-
-      default:
-        throw std::domain_error;
-        break;
-    }
-  } 
-}  // namespace triangle
+  }
 }  // namespace triangle

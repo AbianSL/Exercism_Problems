@@ -1,9 +1,12 @@
 #if !defined(TRIANGLE_H)
 #define TRIANGLE_H
 
-#include <iostream>
-
 namespace triangle {
-  flavor kind(const int kFirst, const int kSecond, const int kThird);
+  enum flavor{
+    equilateral,
+    isosceles,
+    scalene
+  };
+  flavor kind(const int, const int, const int);
 }
 #endif // TRIANGLE_H
