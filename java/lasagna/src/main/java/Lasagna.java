@@ -11,7 +11,13 @@ public class Lasagna {
     return LasagnaTime - remaining_;
   }
 
-  
   // TODO: define the 'preparationTimeInMinutes()' method
+  public int preparationTimeInMinutes(int layers) {
+    return layers * 2;
+  }
+
   // TODO: define the 'totalTimeInMinutes()' method
+  public int totalTimeInMinutes(int layers_added, int time_in_oven) {
+    return 2 * layers_added + time_in_oven;
+  }
 }
