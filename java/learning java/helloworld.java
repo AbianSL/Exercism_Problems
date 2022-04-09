@@ -1,5 +1,6 @@
 class hola {
   // public es para que otras clases puedan acceder al método
+  // esta clase tiene un constructor por defecto
   public static void Holamundo() {  
     System.out.println("hola mundo");
   }
