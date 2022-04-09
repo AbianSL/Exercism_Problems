@@ -60,7 +60,12 @@ public class MountainBike extends Bicycle {
     // one constructor
     public MountainBike(int startHeight, int startCadence,
                         int startSpeed, int startGear) {
+        // super consiste en crear el constructor de la clase "madre"
         super(startCadence, startSpeed, startGear);
+        // también se puede usar this(), lo cual invoca a otro constructor
+        // que este en la misma clase y que soporte el conjunto de parámetros que se pasa
+        // pero no se puede usar los dos a la vez, además estos siempre tienen
+        // que ir al comienzo del constructor
         seatHeight = startHeight;
     }   
         
