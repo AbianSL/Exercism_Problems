@@ -1,6 +1,7 @@
 public class LogLevels {
     
     public static String message(String logLine) {
+        
         throw new UnsupportedOperationException("Please implement the (static) LogLine.message() method");
     }
 
