@@ -1,6 +1,6 @@
 class AnnalynsInfiltration {
   public static boolean canFastAttack(boolean knightIsAwake) {
-    if (knightIsAwake = true) {
+    if (knightIsAwake == true) {
       return false;
     } else {
       return true;
@@ -24,6 +24,13 @@ class AnnalynsInfiltration {
   }
 
   public static boolean canFreePrisoner(boolean knightIsAwake, boolean archerIsAwake, boolean prisonerIsAwake, boolean petDogIsPresent) {
-    throw new UnsupportedOperationException("Please implement the (static) AnnalynsInfiltration.canFreePrisoner() method");
+    if (petDogIsPresent == true && archerIsAwake == false) {
+      return true;
+    } else if (petDogIsPresent == false && archerIsAwake == false 
+              && knightIsAwake == false && prisonerIsAwake == true) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
