@@ -1,6 +1,10 @@
 class AnnalynsInfiltration {
     public static boolean canFastAttack(boolean knightIsAwake) {
-        throw new UnsupportedOperationException("Please implement the (static) AnnalynsInfiltration.canFastAttack() method");
+        if (knightIsAwake = true) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     public static boolean canSpy(boolean knightIsAwake, boolean archerIsAwake, boolean prisonerIsAwake) {
