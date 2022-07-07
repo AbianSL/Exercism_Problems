@@ -2,18 +2,19 @@
 
 namespace pangram {
   bool is_pangram(const std::string &kPhrase) {
-    bool it_is {0};
+    bool it_is [26];
+    bool pangram[26] = {1};
     for (auto i : kPhrase) {
-      it_is = 0;
-      for (int j{'A'}; i < 'z'; ++i) {
-        if (j == 'z' + 1) {
-          j += 'a' - 'A';
-        } else if (i == j) {
-          it_is = 1;
-          break;
-        }
+      if (i >= 'a') {
+        i -= 'a' - 'A'; 
       }
+      i -= 'A';
+      int position {i};
+      it_is[position] = 1;
     }
-    return it_is;
+    if (it_is == pangram) {
+      return 1;
+    }
+    return 0;
   }
 }  // namespace pangram

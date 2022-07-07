@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/usuario/Curso/Exercism_Problems/cpp/pangram/pangram.cpp
+pangram.h
+/home/usuario/Curso/Exercism_Problems/cpp/pangram/pangram.h
+
+/home/usuario/Curso/Exercism_Problems/cpp/pangram/pangram.h
+string
+-
+

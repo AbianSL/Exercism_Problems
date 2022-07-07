@@ -4,7 +4,7 @@
 #include <string>
 
 namespace pangram {
-  bool is_pangram(std::string &Phrase);
+  bool is_pangram(const std::string &Phrase);
 }  // namespace pangram
 
 #endif // PANGRAM_H

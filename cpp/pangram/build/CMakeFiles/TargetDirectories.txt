@@ -1,0 +1,4 @@
+/home/usuario/Curso/Exercism_Problems/cpp/pangram/build/CMakeFiles/rebuild_cache.dir
+/home/usuario/Curso/Exercism_Problems/cpp/pangram/build/CMakeFiles/edit_cache.dir
+/home/usuario/Curso/Exercism_Problems/cpp/pangram/build/CMakeFiles/test_pangram.dir
+/home/usuario/Curso/Exercism_Problems/cpp/pangram/build/CMakeFiles/pangram.dir
