@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tara/programming/Exercism_Problems/cpp/grains/grains.cpp
+grains.h
+/home/tara/programming/Exercism_Problems/cpp/grains/grains.h
+
+/home/tara/programming/Exercism_Problems/cpp/grains/grains.h
+
