@@ -39,7 +39,6 @@ TEST_CASE("encode_deep_thought")
 {
     REQUIRE("gifgs rhurx grlm" == atbash_cipher::encode("Truth is fiction."));
 }
-#if defined(EXERCISM_RUN_ALL_TESTS)
 
 TEST_CASE("encode_all_the_letters")
 {
@@ -47,6 +46,7 @@ TEST_CASE("encode_all_the_letters")
                         atbash_cipher::encode("The quick brown fox jumps over the lazy dog."));
 }
 
+#if defined(EXERCISM_RUN_ALL_TESTS)
 TEST_CASE("decode_exercism")
 {
     REQUIRE("exercism" == atbash_cipher::decode("vcvix rhn"));
