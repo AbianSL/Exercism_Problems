@@ -4,17 +4,18 @@ namespace atbash_cipher {
   /**
    * @brief that funciton is to encode the phrase introduced
    * 
-   * @param kPhrase is the phrase to encode
+   * @param phrase is the copy of the phrase to encode
    * @return const std::string is the phrase encoded
    */
-  const std::string encode(const std::string kPhrase) {
-    char character {0};
-    for(unsigned i{0}; i < kPhrase.length(); ++i) {
-      if ((kPhrase[i] - 'Z') < 0) {
-        character = kPhrase[i] + (kPhrase[i] - 'n');
-        continue;
+  const std::string encode(std::string phrase) {
+    std::string final_phrase {""};
+    for(unsigned i{0}; i < phrase.length(); ++i) {
+      if ((phrase[i] - 'Z') < 0) {
+        phrase[i] + ('a' - 'A');
       }
-      kPhrase[i] - 'n';
+      const char kCharacter {phrase[i] + (phrase[i] - 'n')};
+      final_phrase += kCharacter;
     }
+    return {final_phrase};
   }
 }  // namespace atbash_cipher
