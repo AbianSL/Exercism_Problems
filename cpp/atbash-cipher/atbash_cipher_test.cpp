@@ -10,7 +10,6 @@ TEST_CASE("encode_yes")
     REQUIRE("bvh" == atbash_cipher::encode("yes"));
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
 TEST_CASE("encode_no")
 {
     REQUIRE("ml" == atbash_cipher::encode("no"));
@@ -26,6 +25,7 @@ TEST_CASE("encode_spaces")
     REQUIRE("lnt" == atbash_cipher::encode("O M G"));
 }
 
+#if defined(EXERCISM_RUN_ALL_TESTS)
 TEST_CASE("encode_mindblowingly")
 {
     REQUIRE("nrmwy oldrm tob" == atbash_cipher::encode("mindblowingly"));

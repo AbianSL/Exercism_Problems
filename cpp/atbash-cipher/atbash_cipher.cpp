@@ -10,11 +10,13 @@ namespace atbash_cipher {
   const std::string encode(std::string phrase) {
     std::string final_phrase {""};
     for(unsigned i{0}; i < phrase.length(); ++i) {
-      if ((phrase[i] - 'Z') < 0) {
-        phrase[i] + ('a' - 'A');
+      if ((phrase[i] - 'Z') <= 0) {
+        phrase[i] = phrase[i] + ('a' - 'A');
       }
-      const char kCharacter {phrase[i] + (phrase[i] - 'n')};
-      final_phrase += kCharacter;
+      if (!(phrase[i] <= 'z' && phrase[i] >= 'a')) {
+        continue;
+      }
+      final_phrase += phrase[i] + ('z' - 'a' - (phrase[i] - 'a')) - (phrase[i] - 'a');
     }
     return {final_phrase};
   }
