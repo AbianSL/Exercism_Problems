@@ -9,14 +9,25 @@ namespace atbash_cipher {
    */
   const std::string encode(std::string phrase) {
     std::string final_phrase {""};
+    unsigned count_letter{0};
+
     for(unsigned i{0}; i < phrase.length(); ++i) {
       if ((phrase[i] - 'Z') <= 0) {
         phrase[i] = phrase[i] + ('a' - 'A');
       }
-      if (!(phrase[i] <= 'z' && phrase[i] >= 'a')) {
+      
+      if (!((phrase[i] <= 'z' 
+            && phrase[i] >= 'a')
+            || (phrase[i] >= '0' 
+            && phrase[i] <= '9'))){
         continue;
       }
+
+      if ((count_letter % 5 == 0) ^ (count_letter == 0)) {
+        final_phrase += " ";
+      }
       final_phrase += phrase[i] + ('z' - 'a' - (phrase[i] - 'a')) - (phrase[i] - 'a');
+      ++count_letter;
     }
     return {final_phrase};
   }

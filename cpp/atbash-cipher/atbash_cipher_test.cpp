@@ -25,7 +25,6 @@ TEST_CASE("encode_spaces")
     REQUIRE("lnt" == atbash_cipher::encode("O M G"));
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
 TEST_CASE("encode_mindblowingly")
 {
     REQUIRE("nrmwy oldrm tob" == atbash_cipher::encode("mindblowingly"));
@@ -40,6 +39,7 @@ TEST_CASE("encode_deep_thought")
 {
     REQUIRE("gifgs rhurx grlm" == atbash_cipher::encode("Truth is fiction."));
 }
+#if defined(EXERCISM_RUN_ALL_TESTS)
 
 TEST_CASE("encode_all_the_letters")
 {
