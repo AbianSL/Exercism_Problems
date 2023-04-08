@@ -15,19 +15,16 @@ class HammingTest {
         assertEquals(0, Hamming.compute("", ""))
     }
 
-    @Ignore
     @Test
     fun `single letter identical strands`() {
         assertEquals(0, Hamming.compute("A", "A"))
     }
 
-    @Ignore
     @Test
     fun `single letter different strands`() {
         assertEquals(1, Hamming.compute("G", "T"))
     }
 
-    @Ignore
     @Test
     fun `long identical strands`() {
         assertEquals(0, Hamming.compute("GGACTGAAATCTG", "GGACTGAAATCTG"))
