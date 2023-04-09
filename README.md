@@ -5,14 +5,14 @@ programming language that i'm learning about 2022-2023, like cpp and java
 
 ## Programming Languages:
 
-- ![Kotlin_img](https://github.com/devicons/devicon/blob/master/icons/kotlin/kotlin-original.svg)
+- <img alt="Kotlin_img" src="https://github.com/devicons/devicon/blob/master/icons/kotlin/kotlin-original.svg" width=30px height=30px>
 [***Kotlin***](kotlin/)
 
-- ![Java_img](https://github.com/devicons/devicon/blob/master/icons/java/java-original.svg)
+- <img alt="Java_img" src="https://github.com/devicons/devicon/blob/master/icons/java/java-original.svg" width=30px height=30px>
 [***Java***](java/)
 
-- ![Cpp_img](https://github.com/devicons/devicon/blob/master/icons/cplusplus/cplusplus-original.svg)
+- <img alt="Cpp_img" src="https://github.com/devicons/devicon/blob/master/icons/cplusplus/cplusplus-original.svg" width=30px height=30px>
 [***c++***](cpp/)
 
-- ![Javascript_img](https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg)
+- <img alt="Javascript_img" src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" width=30px height=30px>
 [***JS***](javascript/)
