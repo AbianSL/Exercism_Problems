@@ -1,12 +1,10 @@
 import java.time.LocalDateTime
+import java.time.LocalDate
+import java.time.LocalTime
 
-class Gigasecond {
+class Gigasecond(input_date: LocalDate) {
   
-  val one_gigasecond: Long = 1000000000
+  val one_gigasecond: LocalTime = LocalTime.ofSecondOfDay(1000000000)
   // TODO: Implement proper constructor
-  constructor(input_date: LocalDateTime) {
-    date = input_date.plusSeconds(one_gigasecond)
-  }
-
-  val date: LocalDateTime
+  val date: LocalDateTime = input_date.atTime(one_gigasecond) 
 }
