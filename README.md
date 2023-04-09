@@ -5,7 +5,7 @@ programming language that I'm learning about 2023-2024, like cpp and java, c, ko
 
 ## Programming Languages:
 
-<img alt="Kotlin_img" src="https://github.com/devicons/devicon/blob/master/icons/kotlin/kotlin-original.svg" width=30px height=30px> [***Kotlin***](kotlin/)
+<a href="kotlin/"<img alt="Kotlin_img" src="https://github.com/devicons/devicon/blob/master/icons/kotlin/kotlin-original.svg" width=30px height=30px> <b>Kotlin</b>>
 
 <img alt="Java_img" src="https://github.com/devicons/devicon/blob/master/icons/java/java-original.svg" width=30px height=30px> [***Java***](java/)
 
