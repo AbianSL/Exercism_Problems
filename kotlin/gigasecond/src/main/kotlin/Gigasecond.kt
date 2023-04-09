@@ -4,7 +4,7 @@ import java.time.LocalTime
 
 class Gigasecond {
  
-  val one_gigasecond: Long = 1000000000
+  private val one_gigasecond: Long = 1000000000
   constructor(input_date: LocalDate) { 
     this.date = LocalDateTime.of(input_date, LocalTime.of(0, 0)).plusSeconds(one_gigasecond)  
   }
