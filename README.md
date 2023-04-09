@@ -9,6 +9,6 @@ programming language that I'm learning about 2023-2024, like cpp and java, c, ko
 
 <img alt="Java_img" src="https://github.com/devicons/devicon/blob/master/icons/java/java-original.svg" width=30px height=30px> [***Java***](java/)
 
-<img alt="Cpp_img" src="https://github.com/devicons/devicon/blob/master/icons/cplusplus/cplusplus-original.svg" width=30px height=30px> [***c++***](cpp/)
+<img alt="Cpp_img" src="https://github.com/devicons/devicon/blob/master/icons/cplusplus/cplusplus-original.svg" width=30px height=30px> [***C++***](cpp/)
 
 <img alt="Javascript_img" src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" width=30px height=30px> [***JS***](javascript/)
