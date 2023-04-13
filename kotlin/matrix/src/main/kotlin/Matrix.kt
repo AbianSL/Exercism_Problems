@@ -3,8 +3,8 @@ class Matrix(private val matrixAsString: String) {
     private val MatrixList: List<List<Int>> = PassToInt() 
 
     private fun PassToInt(): List<List<Int>>{
-      var aux: MutableList<Int>() 
-      var result: MutableList<List<Int>>()
+      var aux: MutableList<Int> = mutableListOf<Int>() 
+      var result: MutableList<List<Int>> = mutableListOf<List<Int>>() 
       matrixAsString.forEach {
         if (it == '\n') {
           result.add(aux)
@@ -19,10 +19,16 @@ class Matrix(private val matrixAsString: String) {
 
     
     fun column(colNr: Int): List<Int> {
-        TODO("Implement this to complete the task")
+      var CountCol: Int = 0
+      MatrixList.forEach {
+        if (CountCol == colNr) {
+          return it 
+        } 
+      }
+      return emptyList()
     }
 
     fun row(rowNr: Int): List<Int> {
-        TODO("Implement this to complete the task")
+      return MatrixList[rowNr]
     }
 }
