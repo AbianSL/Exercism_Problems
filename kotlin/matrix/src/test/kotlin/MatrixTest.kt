@@ -1,11 +1,9 @@
 import kotlin.test.Test
 import org.junit.Ignore
-import org.junit.Rule
 import kotlin.test.assertEquals
 
 class MatrixTest {
     
-    @Rule
     @Test
     fun `extract row from one number matrix`() {
         val matrixAsString = "1"
