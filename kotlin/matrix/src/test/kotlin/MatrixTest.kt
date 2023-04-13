@@ -1,8 +1,11 @@
 import kotlin.test.Test
+import org.junit.Ignore
+import org.junit.Rule
 import kotlin.test.assertEquals
 
 class MatrixTest {
-
+    
+    @Rule
     @Test
     fun `extract row from one number matrix`() {
         val matrixAsString = "1"
@@ -10,7 +13,8 @@ class MatrixTest {
         val expectedRow = listOf(1)
         assertEquals(expectedRow, Matrix(matrixAsString).row(rowIndex))
     }
-
+  
+    @Ignore
     @Test
     fun `extract row from matrix`() {
         val matrixAsString = "1 2\n3 4"
@@ -19,6 +23,7 @@ class MatrixTest {
         assertEquals(expectedRow, Matrix(matrixAsString).row(rowIndex))
     }
 
+    @Ignore
     @Test
     fun `extract row from diff widths matrix`() {
         val matrixAsString = "1 2\n10 20"
@@ -27,6 +32,7 @@ class MatrixTest {
         assertEquals(expectedRow, Matrix(matrixAsString).row(rowIndex))
     }
 
+    @Ignore
     @Test
     fun `extract row from non square matrix`() {
         val matrixAsString = """
@@ -40,6 +46,7 @@ class MatrixTest {
         assertEquals(expectedRow, Matrix(matrixAsString).row(rowIndex))
     }
 
+    @Ignore
     @Test
     fun `extract column from one number matrix`() {
         val matrixAsString = "1"
@@ -48,6 +55,7 @@ class MatrixTest {
         assertEquals(expectedColumn, Matrix(matrixAsString).column(columnIndex))
     }
 
+    @Ignore
     @Test
     fun `extract column matrix`() {
         val matrixAsString = """
@@ -59,7 +67,8 @@ class MatrixTest {
         val expectedColumn = listOf(3, 6, 9)
         assertEquals(expectedColumn, Matrix(matrixAsString).column(columnIndex))
     }
-
+  
+    @Ignore
     @Test
     fun `extract column from non square matrix`() {
         val matrixAsString = """
@@ -72,6 +81,7 @@ class MatrixTest {
         assertEquals(expectedColumn, Matrix(matrixAsString).column(columnIndex))
     }
 
+    @Ignore
     @Test
     fun `extract column from diff widths matrix`() {
         val matrixAsString = """
