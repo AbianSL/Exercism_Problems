@@ -4,8 +4,12 @@ class Squares {
     since_value = number_sum 
   }
 
-  fun sumOfSquares() {
-  
+  fun sumOfSquares(): Int {
+    var sum: Int = 0
+    for (i in 1..$since_value) {
+      sum += $i * $i 
+    }
+    return sum 
   }
 
   fun squareOfSum(): Int {
