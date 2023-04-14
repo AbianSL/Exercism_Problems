@@ -1,8 +1,7 @@
-class Triangle<out T : Number>(val a: T, val b: T, val c: T) {
-
-    // TODO: Implement proper constructor
-
-    val isEquilateral: Boolean = TODO("Implement this getter to complete the task")
-    val isIsosceles: Boolean = TODO("Implement this getter to complete the task")
-    val isScalene: Boolean = TODO("Implement this getter to complete the task")
+class Triangle<out T : Number>(private val a: T, private val b: T, private val c: T) {
+  val isEquilateral: Boolean = (a == b && a == c && b == c) 
+  val isIsosceles: Boolean = (a == b && a != c) ||
+                             (a == c && a != b) ||
+                             (b == c && a != b)
+  val isScalene: Boolean = (a != b && a != c && b != c)
 }
