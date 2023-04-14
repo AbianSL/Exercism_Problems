@@ -6,15 +6,22 @@ class Matrix(private val matrixAsString: String) {
       var aux: MutableList<Int> = mutableListOf<Int>() 
       var result: MutableList<List<Int>> = mutableListOf<List<Int>>()
 
+      var line: String = ""
       matrixAsString.forEach { 
         if (it == '\n') {
+          aux.add(line.toInt())
           result.add(aux.toList())
+          line = ""
           aux.clear()
-        } else if (it != ' ') { 
-          aux.add(it.digitToInt())
+        } else if (it == ' ') {
+          aux.add(line.toInt())
+          line = ""
+        } else {
+          line += it
         }
       }
-      if (aux.isNotEmpty()) {
+      if (line != "") {
+        aux.add(line.toInt())
         result.add(aux.toList())
       }
       return result.toList()

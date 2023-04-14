@@ -20,7 +20,6 @@ class MatrixTest {
         assertEquals(expectedRow, Matrix(matrixAsString).row(rowIndex))
     }
 
-    @Ignore
     @Test
     fun `extract row from diff widths matrix`() {
         val matrixAsString = "1 2\n10 20"
