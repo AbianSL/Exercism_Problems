@@ -9,12 +9,9 @@ class MatrixTest {
         val matrixAsString = "1"
         val rowIndex = 1
         val expectedRow = listOf(1)
-        val othermatrix: Matrix = Matrix(matrixAsString)
-        println(othermatrix.MatrixList)
-        assertEquals(expectedRow, othermatrix.row(rowIndex))
+        assertEquals(expectedRow, Matrix(matrixAsString).row(rowIndex))
     }
   
-    @Ignore
     @Test
     fun `extract row from matrix`() {
         val matrixAsString = "1 2\n3 4"
