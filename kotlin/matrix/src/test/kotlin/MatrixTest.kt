@@ -49,7 +49,6 @@ class MatrixTest {
         assertEquals(expectedColumn, Matrix(matrixAsString).column(columnIndex))
     }
 
-    @Ignore
     @Test
     fun `extract column matrix`() {
         val matrixAsString = """
