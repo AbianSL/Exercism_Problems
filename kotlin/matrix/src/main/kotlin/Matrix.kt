@@ -30,13 +30,17 @@ class Matrix(private val matrixAsString: String) {
     
     fun column(colNr: Int): List<Int> {
       var CountCol: Int = 1
+      var result: MutableList<Int> = mutableListOf<Int>()
       MatrixList.forEach {
-        if (CountCol == colNr) {
-          return it 
-        } 
-        ++CountCol
+        it.forEach {
+          if (CountCol == colNr) {
+            result.add(it)
+          } 
+          ++CountCol  
+        }
+        CountCol = 1
       }
-      return emptyList()
+      return result 
     }
 
     fun row(rowNr: Int): List<Int> {
