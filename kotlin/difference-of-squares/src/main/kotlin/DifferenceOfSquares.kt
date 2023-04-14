@@ -6,16 +6,16 @@ class Squares {
 
   fun sumOfSquares(): Int {
     var sum: Int = 0
-    for (i in 1..$since_value) {
-      sum += $i * $i 
+    for (i in 1..since_value) {
+      sum += i * i 
     }
     return sum 
   }
 
   fun squareOfSum(): Int {
     var sum: Int = 0
-    for (i in 1..$since_value) {
-      sum += $i 
+    for (i in 1..since_value) {
+      sum += i 
     }
     return sum * sum 
   }
