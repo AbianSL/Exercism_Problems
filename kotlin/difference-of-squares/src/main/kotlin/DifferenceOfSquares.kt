@@ -20,7 +20,7 @@ class Squares {
     return sum * sum 
   }
 
-  fun difference() {
-      TODO("Implement the function to complete the task")
+  fun difference(): Int {
+    return 0
   }
 }
