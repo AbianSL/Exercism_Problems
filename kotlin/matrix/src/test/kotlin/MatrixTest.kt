@@ -28,7 +28,6 @@ class MatrixTest {
         assertEquals(expectedRow, Matrix(matrixAsString).row(rowIndex))
     }
 
-    @Ignore
     @Test
     fun `extract row from non square matrix`() {
         val matrixAsString = """
@@ -42,7 +41,6 @@ class MatrixTest {
         assertEquals(expectedRow, Matrix(matrixAsString).row(rowIndex))
     }
 
-    @Ignore
     @Test
     fun `extract column from one number matrix`() {
         val matrixAsString = "1"
