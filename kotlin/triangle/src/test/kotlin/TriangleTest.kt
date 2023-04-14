@@ -50,13 +50,11 @@ class TriangleTest {
         assertTrue(Triangle(4, 4, 4).isIsosceles)
     }
 
-    @Ignore
     @Test
     fun `isosceles - no sides are equal`() {
         assertFalse(Triangle(2, 3, 4).isIsosceles)
     }
 
-    @Ignore
     @Test(expected = IllegalArgumentException::class)
     fun `triangle inequality violation - last is greater then sum of others `() {
         Triangle(1, 1, 3)
