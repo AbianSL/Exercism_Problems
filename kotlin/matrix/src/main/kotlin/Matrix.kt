@@ -10,8 +10,7 @@ class Matrix(private val matrixAsString: String) {
         if (it == '\n') {
           result.add(aux.toList())
           aux.clear()
-        }
-        if (it != ' ') {
+        } else if (it != ' ') { 
           aux.add(it.digitToInt())
         }
       }
