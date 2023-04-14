@@ -61,7 +61,6 @@ class MatrixTest {
         assertEquals(expectedColumn, Matrix(matrixAsString).column(columnIndex))
     }
   
-    @Ignore
     @Test
     fun `extract column from non square matrix`() {
         val matrixAsString = """
@@ -74,7 +73,6 @@ class MatrixTest {
         assertEquals(expectedColumn, Matrix(matrixAsString).column(columnIndex))
     }
 
-    @Ignore
     @Test
     fun `extract column from diff widths matrix`() {
         val matrixAsString = """
