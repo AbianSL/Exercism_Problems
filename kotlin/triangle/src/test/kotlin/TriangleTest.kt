@@ -60,49 +60,41 @@ class TriangleTest {
         Triangle(1, 1, 3)
     }
 
-    @Ignore
     @Test(expected = IllegalArgumentException::class)
     fun `triangle inequality violation - second is greater then sum of others `() {
         Triangle(1, 3, 1)
     }
 
-    @Ignore
     @Test(expected = IllegalArgumentException::class)
     fun `triangle inequality violation - first is greater then sum of others `() {
         Triangle(3, 1, 1)
     }
 
-    @Ignore
     @Test
     fun `isosceles - sides may be floats`() {
         assertTrue(Triangle(0.5, 0.4, 0.5).isIsosceles)
     }
 
-    @Ignore
     @Test
     fun `scalene - no sides are equal`() {
         assertTrue(Triangle(5, 4, 6).isScalene)
     }
 
-    @Ignore
     @Test
     fun `scalene - all sides are equal`() {
         assertFalse(Triangle(4, 4, 4).isScalene)
     }
 
-    @Ignore
     @Test
     fun `scalene - two sides are equal`() {
         assertFalse(Triangle(4, 4, 3).isScalene)
     }
 
-    @Ignore
     @Test(expected = IllegalArgumentException::class)
     fun `scalene - may not violate triangle inequality`() {
         Triangle(7, 3, 2)
     }
 
-    @Ignore
     @Test
     fun `scalene - sides may be floats`() {
         assertTrue(Triangle(0.5, 0.4, 0.6).isScalene)
