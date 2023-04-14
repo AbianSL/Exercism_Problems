@@ -29,11 +29,12 @@ class Matrix(private val matrixAsString: String) {
 
     
     fun column(colNr: Int): List<Int> {
-      var CountCol: Int = 0
+      var CountCol: Int = 1
       MatrixList.forEach {
         if (CountCol == colNr) {
           return it 
         } 
+        ++CountCol
       }
       return emptyList()
     }
