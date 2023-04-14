@@ -1,20 +1,24 @@
 class Matrix(private val matrixAsString: String) {
     // Atributtes
-    private val MatrixList: List<List<Int>> = PassToInt() 
+    val MatrixList: List<List<Int>> = PassToInt() 
 
     private fun PassToInt(): List<List<Int>>{
       var aux: MutableList<Int> = mutableListOf<Int>() 
-      var result: MutableList<List<Int>> = mutableListOf<List<Int>>() 
-      matrixAsString.forEach {
+      var result: MutableList<List<Int>> = mutableListOf<List<Int>>()
+
+      matrixAsString.forEach { 
         if (it == '\n') {
-          result.add(aux)
+          result.add(aux.toList())
           aux.clear()
         }
         if (it != ' ') {
-          aux.add(it.toInt())
+          aux.add(it.digitToInt())
         }
       }
-      return result
+      if (aux.isNotEmpty()) {
+        result.add(aux.toList())
+      }
+      return result.toList()
     }
 
     
@@ -29,6 +33,7 @@ class Matrix(private val matrixAsString: String) {
     }
 
     fun row(rowNr: Int): List<Int> {
-      return MatrixList[rowNr]
+      return MatrixList[rowNr - 1]
     }
 }
+

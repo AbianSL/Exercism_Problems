@@ -9,7 +9,9 @@ class MatrixTest {
         val matrixAsString = "1"
         val rowIndex = 1
         val expectedRow = listOf(1)
-        assertEquals(expectedRow, Matrix(matrixAsString).row(rowIndex))
+        val othermatrix: Matrix = Matrix(matrixAsString)
+        println(othermatrix.MatrixList)
+        assertEquals(expectedRow, othermatrix.row(rowIndex))
     }
   
     @Ignore
