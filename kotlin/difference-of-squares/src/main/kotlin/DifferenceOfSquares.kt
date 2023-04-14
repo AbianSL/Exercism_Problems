@@ -21,6 +21,6 @@ class Squares {
   }
 
   fun difference(): Int {
-    return 0
+    return squareOfSum() - sumOfSquares() 
   }
 }
