@@ -1,5 +1,3 @@
-import kotlin.math        // 
-
 class Squares {
     //TODO: implement proper constructor
     private val since_value: Int
