@@ -4,10 +4,11 @@ object HandshakeCalculator {
   fun calculateHandshake(number: Int): List<Signal> {
     val handshake = mutableListOf<Signal>()
     var copy = number
+    var reverse: Boolean = false
     while (copy > 0) {
       if (copy - 16 >= 0) {
         copy -= 16
-        handshake.reverse()
+        reverse = true
       } else if (copy - 8 >= 0) {
         copy -= 8
         handshake.add(0, JUMP)
@@ -24,6 +25,9 @@ object HandshakeCalculator {
         println(handshake)
       }
     }
+    if (reverse) {
+      handshake.reverse()
+    } 
     return handshake 
   }
 }

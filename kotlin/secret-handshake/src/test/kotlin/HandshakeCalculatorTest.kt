@@ -39,7 +39,6 @@ class HandshakeCalculatorTest {
             HandshakeCalculator.calculateHandshake(3))
     }
 
-    @Ignore
     @Test
     fun testAnInputThatYieldsTwoReversedActions() {
         assertEquals(
