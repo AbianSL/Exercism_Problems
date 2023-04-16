@@ -20,4 +20,13 @@ class Matrix(val matrix: List<List<Int>>) {
     }
     return true
   }
+  
+  private fun maxCol(position: MatrixCoordinate): Boolean {
+    for (i in 1..matrix.size) {
+      if (matrix[i][position.col] < matrix[position.row][position.col]) {
+        return false
+      }
+    }
+    return true
+  }
 }
