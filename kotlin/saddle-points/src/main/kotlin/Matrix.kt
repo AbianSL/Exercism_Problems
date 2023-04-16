@@ -5,8 +5,8 @@ class Matrix(val matrix: List<List<Int>>) {
   val saddlePoints: Set<MatrixCoordinate> = SearchSaddlePoint() 
 
   private fun minRow(position: MatrixCoordinate): Boolean {
-    for (i in 1..matrix.get(position.row).size) {
-      if (matrix[position.row][i] > matrix[position.row][position.col]) {
+    for (i in 0..matrix.get(position.row).size - 1) {
+      if (matrix[position.row - 1][i] > matrix[position.row - 1][position.col - 1]) {
         return false
       }
     }
@@ -14,8 +14,8 @@ class Matrix(val matrix: List<List<Int>>) {
   }
   
   private fun maxCol(position: MatrixCoordinate): Boolean {
-    for (i in 1..matrix.size) {
-      if (matrix[i][position.col] < matrix[position.row][position.col]) {
+    for (i in 0..matrix.size - 1) {
+      if (matrix[i][position.col - 1] < matrix[position.row - 1][position.col - 1]) {
         return false
       }
     }
