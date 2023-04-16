@@ -2,7 +2,7 @@ data class MatrixCoordinate(val row: Int, val col: Int)
 
 class Matrix(val matrix: List<List<Int>>) {
   
-  // private val saddlePoints: Set<MatrixCoordinate> 
+  private val saddlePoints: Set<MatrixCoordinate> = SearchSaddlePoint() 
  
   private fun row(row: Int): List<Int> {
     return matrix[row - 1]
@@ -28,5 +28,16 @@ class Matrix(val matrix: List<List<Int>>) {
       }
     }
     return true
+  }
+
+  private fun SearchSaddlePoint(): Set<MatrixCoordinate> {
+    for (i in 1..matrix.size) {
+      for (j in 1..matrix[i].size) {
+        if (minRow(MatrixCoordinate(i, j)) && maxCol(MatrixCoordinate(i, j))) {
+          return setOf(MatrixCoordinate(i, j))
+        }
+      }
+    }
+    return setOf()
   }
 }
