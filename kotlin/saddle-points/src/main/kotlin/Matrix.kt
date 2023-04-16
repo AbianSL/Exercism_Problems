@@ -2,7 +2,7 @@ data class MatrixCoordinate(val row: Int, val col: Int)
 
 class Matrix(val matrix: List<List<Int>>) {
   
-  private val saddlePoints: Set<MatrixCoordinate> = SearchSaddlePoint() 
+  val saddlePoints: Set<MatrixCoordinate> = SearchSaddlePoint() 
  
   private fun row(row: Int): List<Int> {
     return matrix[row - 1]
