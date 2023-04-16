@@ -10,16 +10,18 @@ object HandshakeCalculator {
         handshake.reverse()
       } else if (copy - 8 >= 0) {
         copy -= 8
-        handshake.add(JUMP)
+        handshake.add(0, JUMP)
       } else if (copy - 4 >= 0) {
         copy -= 4
-        handshake.add(CLOSE_YOUR_EYES)
+        handshake.add(0, CLOSE_YOUR_EYES)
       } else if (copy - 2 >= 0) {
         copy -= 2
-        handshake.add(DOUBLE_BLINK)
+        handshake.add(0, DOUBLE_BLINK) 
+        println(handshake)
       } else if (copy - 1 >= 0) {
         copy -= 1
-        handshake.add(WINK)
+        handshake.add(0, WINK)
+        println(handshake)
       }
     }
     return handshake 
