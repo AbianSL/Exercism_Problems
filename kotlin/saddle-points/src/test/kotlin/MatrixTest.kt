@@ -20,7 +20,6 @@ class MatrixTest {
             )
         )
 
-    @Ignore
     @Test
     fun `no saddle points for empty matrix`() =
         assertSaddlePointsEqual(
