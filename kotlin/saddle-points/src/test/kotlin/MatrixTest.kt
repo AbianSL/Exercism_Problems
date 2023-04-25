@@ -40,7 +40,6 @@ class MatrixTest {
             emptySet()
         )
 
-    @Ignore
     @Test
     fun `multiple saddle points in a column`() =
         assertSaddlePointsEqual(
