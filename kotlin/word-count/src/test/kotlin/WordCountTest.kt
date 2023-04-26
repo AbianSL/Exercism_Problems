@@ -18,7 +18,6 @@ class WordCountTest {
         "each" to 1
     )
 
-    @Ignore
     @Test
     fun `multiple occurrences of a word`() = assertWordCountEqual(
         "one fish two fish red fish blue fish",

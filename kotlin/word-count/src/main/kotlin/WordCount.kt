@@ -4,7 +4,7 @@ object WordCount {
     var result = mutableMapOf<String, Int>() 
     phrase.lowercase().split(" ").forEach {
       if (result.containsKey(it)) {
-        result.set(it, 1) 
+        result[it] = result[it]!! + 1 
       } else {
         result.put(it, 1)
       } 
