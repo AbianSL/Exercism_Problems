@@ -4,7 +4,9 @@ object Flattener {
     source.forEach {
       if (it != null) {
         if (it is List<*> || it is Array<*>) {
-          result.add(flatten(it as Collection<*>))
+          flatten(it as Collection<*>).forEach {
+            result.add(it)
+          }
         } else {
           result.add(it)
         }
