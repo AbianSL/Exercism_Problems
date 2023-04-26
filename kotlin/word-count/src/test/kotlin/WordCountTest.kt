@@ -10,7 +10,6 @@ class WordCountTest {
         "word" to 1
     )
 
-    @Ignore
     @Test
     fun `one of each word`() = assertWordCountEqual(
         "one of each",
