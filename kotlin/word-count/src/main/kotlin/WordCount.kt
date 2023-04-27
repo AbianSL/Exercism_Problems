@@ -22,7 +22,7 @@ object WordCount {
         it.forEachIndexed { index, element ->      
           if ((index != 0 &&
               element == '\'' &&
-              original_word.length != index) ||
+              original_word.length - 1 != index) ||
               element.isLetterOrDigit()) {
             word += element
           }
