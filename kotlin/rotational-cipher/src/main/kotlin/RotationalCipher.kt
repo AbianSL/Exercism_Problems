@@ -15,8 +15,9 @@ class RotationalCipher {
       return result.toString()
     }
 
-    private fun encodeChar(letter: Char): Char {
+    private fun encodeChar(letter: Char): Char {  
       var result = (letter.toInt() + shiftKey_).toChar()
+      val range_symbol = 'z'.toInt() - 'a'.toInt() + 1
       var max_symbol: Char
       if (letter.isUpperCase()) {
         max_symbol = 'Z' 
@@ -25,7 +26,7 @@ class RotationalCipher {
       }
       if (letter.isLetter()) {
           while (result > max_symbol) {
-            result = (result.toInt() - max_symbol.toInt()).toChar()
+            result = (result.toInt() - range_symbol).toChar()
           } 
       }
       return result
