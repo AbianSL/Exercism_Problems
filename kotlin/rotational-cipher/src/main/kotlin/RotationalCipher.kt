@@ -7,14 +7,24 @@ class RotationalCipher {
     }
 
     fun encode(text: String): String {
-      
-      return ""
+      var result = StringBuilder(text)
+      text.filter {
+        it != ' ' 
+      }.forEachIndexed { index, it ->
+        result[index] = encodeChar(it) 
+      }
+      return result.toString()
     }
 
     private fun encodeChar(letter: Char): Char {
-      when(letter + shiftKey_) {
-        in 'z'..'A' -> return (letter.toInt() - 'z'.toInt()).toChar() + shiftKey_ 
-        > 'Z' -> return (letter.toInt() - 'Z'.toInt()).toChar() + shiftKey_
+      val Size = 'A'.toInt() - 'Z'.toInt()
+      when(letter) {
+        in 'z'..'A' -> return (letter.toInt() - 'z'.toInt()).toChar() + shiftKey_  
+        in 'A'..'Z' -> return if (letter.toInt() +  shiftKey_ > 'Z'.toInt()) {
+                                return (letter.toInt() - Size).toChar()
+                              } else {
+                                return letter
+                              }
         else -> return (letter.toInt() + shiftKey_).toChar()
       }
       return letter 
