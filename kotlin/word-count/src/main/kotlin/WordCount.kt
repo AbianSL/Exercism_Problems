@@ -14,19 +14,21 @@ object WordCount {
 
   private fun ListWord(phrase: String): List<String> {
     var result = mutableListOf<String>()
-    var delimiters = Regex("[\t\n ]")
+    var delimiters = Regex("[\t\n ,]")
     phrase.lowercase().split(delimiters).forEach {
       var word = ""
       var original_word = it
-      it.forEachIndexed { index, element ->      
-        if ((index != 0 &&
-            element == '\'' &&
-            original_word.length != index) ||
-            element.isLetterOrDigit()) {
-          word += element
+      if (it.isNotBlank()) {
+        it.forEachIndexed { index, element ->      
+          if ((index != 0 &&
+              element == '\'' &&
+              original_word.length != index) ||
+              element.isLetterOrDigit()) {
+            word += element
+          }
         }
+        result.add(word)
       }
-      result.add(word)
     }
     return result
   }
