@@ -1,6 +1,5 @@
 class RotationalCipher {
 
-    // TODO: Implement proper constructor
     val shiftKey_: Int
     constructor(shiftKey: Int) {
       shiftKey_ = shiftKey
@@ -17,16 +16,18 @@ class RotationalCipher {
     }
 
     private fun encodeChar(letter: Char): Char {
-      val Size = 'A'.toInt() - 'Z'.toInt()
-      when(letter) {
-        in 'z'..'A' -> return (letter.toInt() - 'z'.toInt()).toChar() + shiftKey_  
-        in 'A'..'Z' -> return if (letter.toInt() +  shiftKey_ > 'Z'.toInt()) {
-                                return (letter.toInt() - Size).toChar()
-                              } else {
-                                return letter
-                              }
-        else -> return (letter.toInt() + shiftKey_).toChar()
+      var result = (letter.toInt() + shiftKey_).toChar()
+      var max_symbol: Char
+      if (letter.isUpperCase()) {
+        max_symbol = 'Z' 
+      } else {
+        max_symbol = 'z'
       }
-      return letter 
+      if (letter.isLetter()) {
+          while (result > max_symbol) {
+            result = (result.toInt() - max_symbol.toInt()).toChar()
+          } 
+      }
+      return result
     }
 }
