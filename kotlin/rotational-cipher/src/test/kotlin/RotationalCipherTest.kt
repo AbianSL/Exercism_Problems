@@ -28,21 +28,18 @@ class RotationalCipherTest {
         assertEquals("z", cipher.encode("m"))
     }
 
-    @Ignore
     @Test
     fun testRotateLowercaseNBy1SingleWrapAround() {
         val cipher = RotationalCipher(13)
         assertEquals("a", cipher.encode("n"))
     }
 
-    @Ignore
     @Test
     fun testRotateCapitalLettersNoWrapAround() {
         val cipher = RotationalCipher(5)
         assertEquals("TRL", cipher.encode("OMG"))
     }
 
-    @Ignore
     @Test
     fun testSpacesAreUnalteredByRotation() {
         val cipher = RotationalCipher(5)

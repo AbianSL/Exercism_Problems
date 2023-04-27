@@ -7,10 +7,10 @@ class RotationalCipher {
 
     fun encode(text: String): String {
       var result = StringBuilder(text)
-      text.filter {
-        it != ' ' 
-      }.forEachIndexed { index, it ->
-        result[index] = encodeChar(it) 
+      text.forEachIndexed { index, it ->
+        if(result[index] != ' ') {
+          result[index] = encodeChar(it)         
+        }  
       }
       return result.toString()
     }
