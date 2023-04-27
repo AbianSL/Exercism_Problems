@@ -6,7 +6,7 @@ fun transcribeToRna(dna: String): String {
       'C' -> result[i] = 'G'
       'T' -> result[i] = 'A'
       'A' -> result[i] = 'U'
-      
+      else -> throw IllegalArgumentException("Invalid input")
     }
   }
   return result.toString() 
