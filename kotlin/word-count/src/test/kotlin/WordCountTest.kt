@@ -10,6 +10,7 @@ class WordCountTest {
         "word" to 1
     )
 
+    @Ignore
     @Test
     fun `one of each word`() = assertWordCountEqual(
         "one of each",
@@ -18,6 +19,7 @@ class WordCountTest {
         "each" to 1
     )
 
+    @Ignore
     @Test
     fun `multiple occurrences of a word`() = assertWordCountEqual(
         "one fish two fish red fish blue fish",
@@ -28,6 +30,7 @@ class WordCountTest {
         "blue" to 1
     )
 
+    @Ignore
     @Test
     fun `cramped list`() = assertWordCountEqual(
         "one,two,three",
@@ -36,6 +39,7 @@ class WordCountTest {
         "three" to 1
     )
 
+    @Ignore
     @Test
     fun `expanded list`() = assertWordCountEqual(
         "one,\ntwo,\nthree",
@@ -44,6 +48,7 @@ class WordCountTest {
         "three" to 1
     )
 
+    @Ignore
     @Test
     fun `punctuation is ignored`() = assertWordCountEqual(
         "car: carpet as java: javascript!!&@\$%^&",
@@ -54,6 +59,7 @@ class WordCountTest {
         "javascript" to 1
     )
 
+    @Ignore
     @Test
     fun `numbers are allowed`() = assertWordCountEqual(
         "testing, 1, 2 testing",
@@ -62,6 +68,7 @@ class WordCountTest {
         "2" to 1
     )
 
+    @Ignore
     @Test
     fun `case insensitive`() = assertWordCountEqual(
         "go Go GO Stop stop",
