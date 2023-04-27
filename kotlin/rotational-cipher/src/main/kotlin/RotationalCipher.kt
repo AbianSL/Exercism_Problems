@@ -25,9 +25,11 @@ class RotationalCipher {
         max_symbol = 'z'
       }
       if (letter.isLetter()) {
-          while (result > max_symbol) {
-            result = (result.toInt() - range_symbol).toChar()
-          } 
+        while (result > max_symbol) {
+          result = (result.toInt() - range_symbol).toChar()
+        } 
+      } else {
+        return letter
       }
       return result
     }
