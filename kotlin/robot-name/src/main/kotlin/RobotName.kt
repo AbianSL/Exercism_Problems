@@ -1,11 +1,12 @@
-
-
 class Robot {
 
-    val name: String
-        get() = ('A'..'Z').random().toString() + ('A'..'Z').random().toString() + (100..999).random().toString() 
+    var name: String = GenerateName()
 
     fun reset() {
-        TODO("Implement this function to complete the task")
+      name = GenerateName()
     }
+
+    private fun GenerateName(): String {
+      return ('A'..'Z').random().toString() + ('A'..'Z').random().toString() + (100..999).random().toString() 
+    } 
 }
