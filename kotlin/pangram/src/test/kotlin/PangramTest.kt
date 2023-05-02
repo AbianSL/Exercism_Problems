@@ -10,13 +10,11 @@ class PangramTest {
         assertFalse(Pangram.isPangram(""))
     }
 
-    @Ignore
     @Test
     fun perfectLowerCase() {
         assertTrue(Pangram.isPangram("abcdefghijklmnopqrstuvwxyz"))
     }
 
-    @Ignore
     @Test
     fun onlyLowerCase() {
         assertTrue(Pangram.isPangram("the quick brown fox jumps over the lazy dog"))
