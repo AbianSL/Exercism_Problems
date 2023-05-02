@@ -7,4 +7,4 @@ def square(number):
     return count
 
 def total():
-    return square(64) 
+    return square(64) * 2 - 1
