@@ -11,12 +11,15 @@ create((DimX, DimY)) :-
 % vulnerable to an attack by another queen positioned on FromTuple.
 attack((FromX, FromY), (ToX, ToY)):-
   (or(FromX is ToX, FromY is ToY) ->
-  			true
-   ; FromX - ToX is FromY - ToY ->
+  		true
+   ; abs(FromX - ToX) =:= abs(FromY - ToY) ->
    		true
    ; fail
   ).
 
 and(A,B):- A, B.
 or(A,B):- A ; B.
-
+abs(A):- (A < 0 ->
+             not(A)   
+          ; A
+         ).
