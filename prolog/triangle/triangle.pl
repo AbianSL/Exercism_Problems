@@ -14,7 +14,7 @@ is_triangle(Side1, Side2, Side3):-
 ).
 
 is_right_type(Side1, Side2, Side3, Type):-
-    ( Type == "equileteral" ->
+    ( Type == "equilateral" ->
         is_equileteral(Side1, Side2, Side3)
       ; Type == "isosceles" ->
         is_isosceles(Side1, Side2, Side3)
@@ -22,7 +22,8 @@ is_right_type(Side1, Side2, Side3, Type):-
         is_scalene(Side1, Side2, Side3)
     ).
 
-is_equileteral(Side1, Side2, Side3).
+is_equileteral(Side1, Side2, Side3):-
+    Side1 =:= Side2, Side2 =:= Side3.
 
 is_isosceles(Side1, Side2, Side3):-
     Side1 =:= Side2; Side2 =:= Side3.
