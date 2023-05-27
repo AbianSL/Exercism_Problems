@@ -6,8 +6,6 @@ def sum_of_squares(number):
         digit = number % base 
         number //= base 
         sum += digit ** size
-        print("Digit", digit)
-        print("Sum", sum)
     return sum
 
 def is_armstrong_number(number):
