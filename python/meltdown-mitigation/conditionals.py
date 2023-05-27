@@ -70,5 +70,4 @@ def fail_safe(temperature, neutrons_produced_per_second, threshold):
         return "LOW"
     if 0.9 * threshold <= product <= 1.1 * threshold:
         return "NORMAL"
-    else:
-        return "DANGER"
+    return "DANGER"
