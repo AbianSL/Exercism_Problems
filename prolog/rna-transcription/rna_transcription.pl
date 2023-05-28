@@ -1,7 +1,6 @@
 complement('C', 'G').
 complement('G', 'C').
-complement('A', 'T').
-complement('U', 'A').
+complement('A', 'U').
 complement('T', 'A').
 
 rna_transcription(Rna, Dna):-
