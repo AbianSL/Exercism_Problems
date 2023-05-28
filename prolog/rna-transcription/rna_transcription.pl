@@ -1,14 +1,10 @@
-rna_transcription([Letter_Rna|Rna], [Letter_Dna|Dna]):-
-    ( Letter_Rna == 'C' ->
-        Letter_Dna = 'G'
-      
-      ; Letter_Rna == 'G' ->
-        Letter_Dna = 'C'
-      
-      ; Letter_Rna == 'A' ->
-        Letter_Dna = 'T'
-      
-      ; Letter_Dna == 'U' ->
-        Letter_Dna = 'A'
-    )
-    rna_transcription(Rna, Dna).
+complement('C', 'G').
+complement('G', 'C').
+complement('A', 'T').
+complement('U', 'A').
+complement('T', 'A').
+
+rna_transcription(Rna, Dna):-
+  string_chars(Rna, Rnda_seq),
+  maplist(complement, Rnda_seq, Dna_seq),
+  string_chars(Dna, Dna_seq).
