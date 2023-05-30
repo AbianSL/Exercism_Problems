@@ -19,6 +19,13 @@ def sum(dices):
         sum += i
     return sum
 
+def check_straight(dices, number):
+    for i in dices:
+        if i != number:
+            return False
+        number += 1
+    return True
+
 def check_yacht(dices):
     first = dices[0]
     for i in dices:
@@ -44,4 +51,8 @@ def score(dice, category):
         return YACHT
     elif check_number(dice, category):
         return calculate_number(dice, category)
+    elif category == BIG_STRAIGHT and check_straight(dice, 2):
+        return sum(dice)
+    elif category == LITTLE_STRAIGHT and check_straight(dice, 1):
+        return sum(dice)
     return 0
