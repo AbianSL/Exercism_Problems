@@ -25,7 +25,7 @@ def check_straight(dices, category):
         list = [2, 3, 4, 5, 6]
     check_list = [False, False, False, False, False]
     for i in dices:
-        if i != list:
+        if not i in list:
             return False
         if category == BIG_STRAIGHT:
             check_list[i - 2] = True
