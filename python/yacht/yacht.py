@@ -9,9 +9,15 @@ FIVES = 5
 SIXES = 6
 FULL_HOUSE = None
 FOUR_OF_A_KIND = None
-LITTLE_STRAIGHT = None
-BIG_STRAIGHT = None
+LITTLE_STRAIGHT = 30 
+BIG_STRAIGHT = 30 
 CHOICE = None 
+
+def sum(dices):
+    sum = 0
+    for i in range(dices):
+        sum += dices[i]
+    return sum
 
 def check_yacht(dices):
     first = dices[0]
