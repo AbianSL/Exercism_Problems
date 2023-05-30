@@ -21,7 +21,6 @@ def sum(dices):
 
 def check_straight(dices, category):
     list = [1, 2, 3, 4, 5]
-    amount = 0 
     if category == BIG_STRAIGHT:
         list = [2, 3, 4, 5, 6]
     check_list = [False, False, False, False, False]
@@ -67,8 +66,6 @@ def score(dice, category):
         return YACHT
     elif check_number(dice, category):
         return calculate_number(dice, category)
-    elif category == BIG_STRAIGHT and check_straight(dice, 2):
-        return 30 
-    elif category == LITTLE_STRAIGHT and check_straight(dice, 1):
-        return 30 
+    elif check_straight(dice, category):
+        return 30
     return 0
