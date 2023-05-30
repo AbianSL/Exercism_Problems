@@ -28,5 +28,5 @@ def check_yacht(dices):
 
 def score(dice, category):
     if category == YACHT and check_yacht(dice):
-        return 50
+        return YACHT
     return 0
