@@ -15,8 +15,8 @@ CHOICE = None
 
 def sum(dices):
     sum = 0
-    for i in range(dices):
-        sum += dices[i]
+    for i in dices:
+        sum += i
     return sum
 
 def check_yacht(dices):
