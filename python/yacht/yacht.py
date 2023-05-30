@@ -9,7 +9,7 @@ FIVES = 5
 SIXES = 6
 FULL_HOUSE = None
 FOUR_OF_A_KIND = None
-LITTLE_STRAIGHT = 30 
+LITTLE_STRAIGHT = 20 
 BIG_STRAIGHT = 30 
 CHOICE = None 
 
@@ -19,11 +19,27 @@ def sum(dices):
         sum += i
     return sum
 
-def check_straight(dices, number):
+def check_straight(dices, category):
+    list = [1, 2, 3, 4, 5]
+    amount = 0 
+    if category == BIG_STRAIGHT:
+        list = [2, 3, 4, 5, 6]
+    check_list = [False, False, False, False, False]
     for i in dices:
-        if i != number:
+        if i != list:
             return False
-        number += 1
+        if category == BIG_STRAIGHT:
+            check_list[i - 2] = True
+        else:
+            check_list[i - 1] = True
+    if is_all_true(check_list):
+        return True
+    return False
+
+def is_all_true(list):
+    for i in list:
+        if i == False:
+            return False
     return True
 
 def check_yacht(dices):
@@ -52,7 +68,7 @@ def score(dice, category):
     elif check_number(dice, category):
         return calculate_number(dice, category)
     elif category == BIG_STRAIGHT and check_straight(dice, 2):
-        return sum(dice)
+        return 30 
     elif category == LITTLE_STRAIGHT and check_straight(dice, 1):
-        return sum(dice)
+        return 30 
     return 0
