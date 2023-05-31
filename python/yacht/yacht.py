@@ -19,6 +19,19 @@ def sum(dices):
         sum += i
     return sum
 
+def sum_same_kind(dices):
+    sum = 0
+    first = dices[0] 
+    count = 0
+    for i in dices:
+        if count < 4:
+            break
+        
+        if first == i:
+            count += 1
+            sum += i
+    return sum
+
 def check_straight(dices, category):
     list = [1, 2, 3, 4, 5]
     if category == BIG_STRAIGHT:
@@ -39,6 +52,15 @@ def is_all_true(list):
     for i in list:
         if i == False:
             return False
+    return True
+
+def is_four_kind(dices):
+    first = dices[0]
+    count = 0
+    for i in dices:
+        if first != i and count == len(dices) - 1:
+            return False
+        count += 1
     return True
 
 def check_yacht(dices):
@@ -70,6 +92,6 @@ def score(dice, category):
         return 30
     elif category == CHOICE:
         return sum(dice)
-    elif category == FOUR_OF_A_KIND:
-        
+    elif category == FOUR_OF_A_KIND and is_four_kind(dice):
+        return sum_same_kind(dice)
     return 0
