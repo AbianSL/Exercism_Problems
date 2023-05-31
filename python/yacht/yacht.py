@@ -8,10 +8,10 @@ FOURS = 4
 FIVES = 5
 SIXES = 6
 FULL_HOUSE = None
-FOUR_OF_A_KIND = None
+FOUR_OF_A_KIND = 35 
 LITTLE_STRAIGHT = 20 
 BIG_STRAIGHT = 30 
-CHOICE = None 
+CHOICE = 25 
 
 def sum(dices):
     sum = 0
@@ -68,4 +68,8 @@ def score(dice, category):
         return calculate_number(dice, category)
     elif check_straight(dice, category):
         return 30
+    elif category == CHOICE:
+        return sum(dice)
+    elif category == FOUR_OF_A_KIND:
+        
     return 0
