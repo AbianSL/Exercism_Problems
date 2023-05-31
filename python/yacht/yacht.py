@@ -24,7 +24,7 @@ def sum_same_kind(dices):
     first = dices[0] 
     count = 0
     for i in dices:
-        if count < 4:
+        if count > 3:
             break
         
         if first == i:
