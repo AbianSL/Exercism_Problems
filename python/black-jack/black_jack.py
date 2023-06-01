@@ -15,6 +15,7 @@ def value_of_card(card):
     2.  'A' (ace card) = 1
     3.  '2' - '10' = numerical value.
     """
+    
     if card == 'A':
         return 1
     elif card in ['J', 'Q', 'K']:
@@ -34,8 +35,13 @@ def higher_card(card_one, card_two):
     2.  'A' (ace card) = 1
     3.  '2' - '10' = numerical value.
     """
+    
+    if card_one == card_two:
+        return card_one, card_two
+    elif card_one > card_two:
+        return card_one
+    return card_two
 
-    pass
 
 
 def value_of_ace(card_one, card_two):
