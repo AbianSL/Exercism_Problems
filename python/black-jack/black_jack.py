@@ -68,7 +68,6 @@ def value_of_ace(card_one, card_two):
     return 11
 
 
-
 def is_blackjack(card_one, card_two):
     """Determine if the hand is a 'natural' or 'blackjack'.
 
@@ -79,9 +78,15 @@ def is_blackjack(card_one, card_two):
     2.  'A' (ace card) = 11 (if already in hand)
     3.  '2' - '10' = numerical value.
     """
-
-    pass
-
+    first = value_of_card(card_one)
+    second = value_of_card(card_two)
+    if first == 1:
+        first = 11
+    if second == 1:
+        second = 11
+    if first + second == 21: 
+        return True
+    return False
 
 def can_split_pairs(card_one, card_two):
     """Determine if a player can split their hand into two hands.
