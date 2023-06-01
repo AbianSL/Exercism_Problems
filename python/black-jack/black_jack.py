@@ -19,8 +19,8 @@ def value_of_card(card):
         return 1
     elif card in ['J', 'Q', 'K']:
         return 10
-    elif card in [2, 3, 4, 5, 6, 7, 8, 9, 10]:
-        return card
+    elif card in ['2', '3', '4', '5', '6', '7', '8', '9', '10']:
+        return int(card)
     return 0
 
 
