@@ -46,7 +46,7 @@ def check_full_house(dices):
             count_second += 1
         elif i == third:
             count_third += 1
-    if count != 3 or count_second != 3:
+    if count != 3 and count_second != 3 and count_third != 3:
         return False
     return True
 
