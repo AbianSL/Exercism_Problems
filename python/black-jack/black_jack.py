@@ -57,9 +57,9 @@ def value_of_ace(card_one, card_two):
     
     first = value_of_card(card_one)
     second = value_of_card(card_two)
-    if 1 is first:
+    if 1 == first:
         first = 11
-    elif 1 is second:
+    elif 1 == second:
         second = 11
 
     sum = first + second
@@ -107,4 +107,6 @@ def can_double_down(card_one, card_two):
     :return: bool - can the hand can be doubled down? (i.e. totals 9, 10 or 11 points).
     """
 
-    pass
+    if value_of_card(card_one) + value_of_card(card_two) in [9, 10, 11]:
+        return True
+    return False
