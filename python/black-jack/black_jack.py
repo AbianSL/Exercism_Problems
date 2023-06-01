@@ -18,9 +18,9 @@ def value_of_card(card):
     
     if card == 'A':
         return 1
-    elif card in ['J', 'Q', 'K']:
+    if card in ['J', 'Q', 'K']:
         return 10
-    elif card in ['2', '3', '4', '5', '6', '7', '8', '9', '10']:
+    if card in ['2', '3', '4', '5', '6', '7', '8', '9', '10']:
         return int(card)
     return 0
 
@@ -38,7 +38,7 @@ def higher_card(card_one, card_two):
     
     if value_of_card(card_one) == value_of_card(card_two):
         return card_one, card_two
-    elif value_of_card(card_one) > value_of_card(card_two):
+    if value_of_card(card_one) > value_of_card(card_two):
         return card_one
     return card_two
 
@@ -62,8 +62,8 @@ def value_of_ace(card_one, card_two):
     elif 1 == second:
         second = 11
 
-    sum = first + second
-    if sum + 11 > 21:
+    sum_of_values = first + second
+    if sum_of_values + 11 > 21:
         return 1
     return 11
 
