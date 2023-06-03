@@ -28,8 +28,8 @@ def make_word_groups(vocab_words):
     
     prefix = vocab_words[0]
     result = [prefix]
-    for i in vocab_words[1::]:
-        result.append(prefix + i)
+    for word in vocab_words[1::]:
+        result.append(prefix + word)
     return ' :: '.join(result)
 
 
