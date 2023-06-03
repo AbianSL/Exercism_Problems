@@ -58,5 +58,6 @@ def adjective_to_verb(sentence, index):
 
     For example, ("It got dark as the sun set", 2) becomes "darken".
     """
-
-    pass
+    if index == '-1' or index == len(sentence):
+        sentence = sentence[:len(sentence)]
+    return sentence.split(' ')[index] + 'en'
