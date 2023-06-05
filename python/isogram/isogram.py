@@ -1,2 +1,6 @@
 def is_isogram(string):
-    pass
+    alphabet = ["abcdefghijklmnopqrtsuvxyz"]
+    for i in string:
+        if i not in alphabet:
+            return False
+    return True
