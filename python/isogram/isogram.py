@@ -1,6 +1,4 @@
 def is_isogram(string):
-    alphabet = ["abcdefghijklmnopqrtsuvxyz"]
-    for i in string:
-        if i not in alphabet:
-            return False
-    return True
+    string = string.replace('-', '').replace(' ', '').replace('_', '').lower() 
+        
+    return len(string) == len(set(string))
