@@ -11,8 +11,7 @@ def get_rounds(number):
     :return: list - current round and the two that follow.
     """
 
-    pass
-
+    return list((number, number + 1, number + 2))
 
 def concatenate_rounds(rounds_1, rounds_2):
     """Concatenate two lists of round numbers.
