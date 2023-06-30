@@ -63,7 +63,7 @@ def how_many_namefellows(queue, person_name):
     :return: int - the number of times the name appears in the queue.
     """
 
-    pass
+    return queue.count(person_name)
 
 
 def remove_the_last_person(queue):
@@ -73,7 +73,7 @@ def remove_the_last_person(queue):
     :return: str - name that has been removed from the end of the queue.
     """
 
-    pass
+    return queue.pop()
 
 
 def sorted_names(queue):
