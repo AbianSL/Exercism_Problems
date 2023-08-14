@@ -35,7 +35,11 @@ def above_threshold(student_scores, threshold):
     :return: list - of integer scores that are at or above the "best" threshold.
     """
 
-    pass
+    best_students = []
+    for score in student_scores:
+        if score >= threshold:
+            best_students.append(score)
+    return best_students 
 
 
 def letter_grades(highest):
@@ -52,8 +56,12 @@ def letter_grades(highest):
             86 <= "A" <= 100
     """
 
-    pass
-
+    LETTER_F = 40
+    INTERVAL_SIZE = (highest - LETTER_F) // 4
+    intervals = [41]
+    for number in range(1, 4):
+        intervals.append(intervals[0] + (INTERVAL_SIZE * number))    
+    return intervals
 
 def student_ranking(student_scores, student_names):
     """Organize the student's rank, name, and grade information in ascending order.
@@ -63,7 +71,10 @@ def student_ranking(student_scores, student_names):
     :return: list - of strings in format ["<rank>. <student name>: <score>"].
     """
 
-    pass
+    result = []
+    for index, score in enumerate(student_scores):
+        result.append(f"{index + 1}. {student_names[index]}: {score}")
+    return result
 
 
 def perfect_score(student_info):
