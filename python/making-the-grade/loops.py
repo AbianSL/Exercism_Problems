@@ -8,10 +8,10 @@ def round_scores(student_scores):
     :return: list - student scores *rounded* to nearest integer value.
     """
 
-    list = []
+    score_list = []
     for score in student_scores:
-        list.append(round(score))
-    return list
+        score_list.append(round(score))
+    return score_list
 
 
 def count_failed_students(student_scores):
@@ -56,11 +56,11 @@ def letter_grades(highest):
             86 <= "A" <= 100
     """
 
-    LETTER_F = 40
-    INTERVAL_SIZE = (highest - LETTER_F) // 4
+    letter_f = 40
+    interval_size = (highest - letter_f) // 4
     intervals = [41]
     for number in range(1, 4):
-        intervals.append(intervals[0] + (INTERVAL_SIZE * number))    
+        intervals.append(intervals[0] + (interval_size * number))    
     return intervals
 
 def student_ranking(student_scores, student_names):
