@@ -8,6 +8,6 @@ public class LogLevels {
   }
 
   public static String reformat(String logLine) {
-    return message(logLine).concat(" (" + logLevel(logLine) + ")");
+    return message(logLine).concat(" (" + logLevel(logLine) + ")"); 
   }
 }
