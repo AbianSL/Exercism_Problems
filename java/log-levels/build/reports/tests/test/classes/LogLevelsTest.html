@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.069s</div>
+<div class="counter">0.082s</div>
 <p>duration</p>
 </div>
 </td>
@@ -73,9 +73,10 @@
 <a name="error_reformat"></a>
 <h3 class="failures">error_reformat</h3>
 <span class="code">
-<pre>java.lang.UnsupportedOperationException: Please implement the (static) LogLine.reformat() method
-	at LogLevels.reformat(LogLevels.java:11)
-	at LogLevelsTest.error_reformat(LogLevelsTest.java:43)
+<pre>org.junit.ComparisonFailure: expected:&lt;&quot;Segmentation fault[ ](error)&quot;&gt; but was:&lt;&quot;Segmentation fault[](error)&quot;&gt;
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at LogLevelsTest.error_reformat(LogLevelsTest.java:44)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
@@ -122,9 +123,10 @@
 <a name="info_reformat"></a>
 <h3 class="failures">info_reformat</h3>
 <span class="code">
-<pre>java.lang.UnsupportedOperationException: Please implement the (static) LogLine.reformat() method
-	at LogLevels.reformat(LogLevels.java:11)
-	at LogLevelsTest.info_reformat(LogLevelsTest.java:55)
+<pre>org.junit.ComparisonFailure: expected:&lt;&quot;Disk defragmented[ ](info)&quot;&gt; but was:&lt;&quot;Disk defragmented[](info)&quot;&gt;
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at LogLevelsTest.info_reformat(LogLevelsTest.java:56)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
@@ -171,9 +173,10 @@
 <a name="reformat_with_leading_and_trailing_white_space"></a>
 <h3 class="failures">reformat_with_leading_and_trailing_white_space</h3>
 <span class="code">
-<pre>java.lang.UnsupportedOperationException: Please implement the (static) LogLine.reformat() method
-	at LogLevels.reformat(LogLevels.java:11)
-	at LogLevelsTest.reformat_with_leading_and_trailing_white_space(LogLevelsTest.java:61)
+<pre>org.junit.ComparisonFailure: expected:&lt;&quot;Corrupt disk[ ](error)&quot;&gt; but was:&lt;&quot;Corrupt disk[](error)&quot;&gt;
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at LogLevelsTest.reformat_with_leading_and_trailing_white_space(LogLevelsTest.java:62)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
@@ -220,9 +223,10 @@
 <a name="warning_reformat"></a>
 <h3 class="failures">warning_reformat</h3>
 <span class="code">
-<pre>java.lang.UnsupportedOperationException: Please implement the (static) LogLine.reformat() method
-	at LogLevels.reformat(LogLevels.java:11)
-	at LogLevelsTest.warning_reformat(LogLevelsTest.java:49)
+<pre>org.junit.ComparisonFailure: expected:&lt;...ecreased performance[ ](warning)&quot;&gt; but was:&lt;...ecreased performance[](warning)&quot;&gt;
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at LogLevelsTest.warning_reformat(LogLevelsTest.java:50)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
@@ -288,7 +292,7 @@
 </tr>
 <tr>
 <td class="failures">error_reformat</td>
-<td class="failures">0.001s</td>
+<td class="failures">0.002s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
@@ -298,22 +302,22 @@
 </tr>
 <tr>
 <td class="success">info_message</td>
-<td class="success">0.001s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="failures">info_reformat</td>
-<td class="failures">0.001s</td>
+<td class="failures">0.002s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">message_with_leading_and_trailing_white_space</td>
-<td class="success">0.059s</td>
+<td class="success">0.057s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="failures">reformat_with_leading_and_trailing_white_space</td>
-<td class="failures">0.005s</td>
+<td class="failures">0.019s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
@@ -323,12 +327,12 @@
 </tr>
 <tr>
 <td class="success">warning_message</td>
-<td class="success">0.001s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="failures">warning_reformat</td>
-<td class="failures">0.001s</td>
+<td class="failures">0.002s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -341,7 +345,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.3</a> at 29 ago 2023, 4:36:18</p>
+<a href="http://www.gradle.org">Gradle 8.3</a> at 29 ago 2023, 4:38:10</p>
 </div>
 </div>
 </body>
