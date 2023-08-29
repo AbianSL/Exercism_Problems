@@ -36,7 +36,10 @@ public class Blackjack {
     }
 
     public boolean isBlackjack(String card1, String card2) {
-        throw new UnsupportedOperationException("Please implement the Blackjack.isBlackjack method");
+      if (parseCard(card1) + parseCard(card2) == 21) {
+        return true;
+      }
+      return false;
     }
 
     public String largeHand(boolean isBlackjack, int dealerScore) {
