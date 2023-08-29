@@ -1,6 +1,6 @@
 public class LogLevels {  
   public static String message(String logLine) {
-		
+	  return "[Error]: " + logLine	
   }
   
 	public static String logLevel(String logLine) {
