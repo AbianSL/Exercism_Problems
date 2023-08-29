@@ -1,6 +1,6 @@
 public class LogLevels {  
   public static String message(String logLine) {
-	  return logLine.substring(":", logLine.length).trim();	
+	  return logLine.substring(logLine.indexOf(":"), logLine.length()).trim();	
   }
   
 	public static String logLevel(String logLine) {
