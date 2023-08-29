@@ -43,7 +43,12 @@ public class Blackjack {
     }
 
     public String largeHand(boolean isBlackjack, int dealerScore) {
-        throw new UnsupportedOperationException("Please implement the Blackjack.largeHand method");
+      if (isBlackjack && (dealerScore < 10)) {
+        return "W";
+      } else if (isBlackjack) {
+        return "S"  
+      }
+      return "P":
     }
 
     public String smallHand(int handScore, int dealerScore) {
