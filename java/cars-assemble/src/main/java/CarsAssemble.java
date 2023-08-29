@@ -6,13 +6,13 @@ public class CarsAssemble {
         return total * 0.77;
       } else if (speed == 9) {
         return total * 0.80;
-      } else if (speed < 9 && speed > 5) {
+      } else if (speed < 9 && speed > 4) {
         return total * 0.90;
       }
       return total;
     }
 
     public int workingItemsPerMinute(int speed) {
-        throw new UnsupportedOperationException("Please implement the CarsAssemble.workingItemsPerMinute() method");
+      return (int)productionRatePerHour(speed) / 60;
     }
 }
