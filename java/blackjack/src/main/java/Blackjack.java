@@ -46,7 +46,7 @@ public class Blackjack {
       if (isBlackjack && (dealerScore < 10)) {
         return "W";
       } else if (isBlackjack) {
-        return "S"  
+        return "S"; 
       }
       return "P":
     }
