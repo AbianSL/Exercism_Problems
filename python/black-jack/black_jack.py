@@ -15,8 +15,14 @@ def value_of_card(card):
     2.  'A' (ace card) = 1
     3.  '2' - '10' = numerical value.
     """
-
-    pass
+    
+    if card == 'A':
+        return 1
+    if card in ['J', 'Q', 'K']:
+        return 10
+    if card in ['2', '3', '4', '5', '6', '7', '8', '9', '10']:
+        return int(card)
+    return 0
 
 
 def higher_card(card_one, card_two):
@@ -29,8 +35,13 @@ def higher_card(card_one, card_two):
     2.  'A' (ace card) = 1
     3.  '2' - '10' = numerical value.
     """
+    
+    if value_of_card(card_one) == value_of_card(card_two):
+        return card_one, card_two
+    if value_of_card(card_one) > value_of_card(card_two):
+        return card_one
+    return card_two
 
-    pass
 
 
 def value_of_ace(card_one, card_two):
@@ -43,8 +54,18 @@ def value_of_ace(card_one, card_two):
     2.  'A' (ace card) = 11 (if already in hand)
     3.  '2' - '10' = numerical value.
     """
+    
+    first = value_of_card(card_one)
+    second = value_of_card(card_two)
+    if 1 == first:
+        first = 11
+    elif 1 == second:
+        second = 11
 
-    pass
+    sum_of_values = first + second
+    if sum_of_values + 11 > 21:
+        return 1
+    return 11
 
 
 def is_blackjack(card_one, card_two):
@@ -57,9 +78,15 @@ def is_blackjack(card_one, card_two):
     2.  'A' (ace card) = 11 (if already in hand)
     3.  '2' - '10' = numerical value.
     """
-
-    pass
-
+    first = value_of_card(card_one)
+    second = value_of_card(card_two)
+    if first == 1:
+        first = 11
+    if second == 1:
+        second = 11
+    if first + second == 21: 
+        return True
+    return False
 
 def can_split_pairs(card_one, card_two):
     """Determine if a player can split their hand into two hands.
@@ -68,7 +95,9 @@ def can_split_pairs(card_one, card_two):
     :return: bool - can the hand be split into two pairs? (i.e. cards are of the same value).
     """
 
-    pass
+    if value_of_card(card_one) is value_of_card(card_two):
+        return True
+    return False
 
 
 def can_double_down(card_one, card_two):
@@ -78,4 +107,6 @@ def can_double_down(card_one, card_two):
     :return: bool - can the hand can be doubled down? (i.e. totals 9, 10 or 11 points).
     """
 
-    pass
+    if value_of_card(card_one) + value_of_card(card_two) in [9, 10, 11]:
+        return True
+    return False
