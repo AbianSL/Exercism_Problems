@@ -1,7 +1,15 @@
 public class CarsAssemble {
 
     public double productionRatePerHour(int speed) {
-        throw new UnsupportedOperationException("Please implement the CarsAssemble.productionRateperHour() method");
+      int total = speed * 221;
+      if (speed == 10) {
+        return total * 0.77;
+      } else if (speed == 9) {
+        return total * 0.80;
+      } else if (speed < 9 && speed > 5) {
+        return total * 0.90;
+      }
+      return total;
     }
 
     public int workingItemsPerMinute(int speed) {
