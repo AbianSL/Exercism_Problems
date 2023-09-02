@@ -4,7 +4,7 @@ public class ElonsToyCar {
     }
 
     public String distanceDisplay() {
-        throw new UnsupportedOperationException("Please implement the (static) RemoteControlCar.distanceDisplay()  method");
+      return "Driven " + distance + " meters"; 
     }
 
     public String batteryDisplay() {
@@ -14,4 +14,6 @@ public class ElonsToyCar {
     public void drive() {
         throw new UnsupportedOperationException("Please implement the (static) RemoteControlCar.drive()  method");
     }
+
+    private int distance = 0; 
 }
