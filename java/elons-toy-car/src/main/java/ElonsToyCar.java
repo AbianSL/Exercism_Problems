@@ -8,11 +8,18 @@ public class ElonsToyCar {
     }
 
     public String batteryDisplay() {
+      if (battery <= 0) {
+        return "Battery empty";
+      }
       return "Battery at " + battery + "%";
     }
 
     public void drive() {
-        throw new UnsupportedOperationException("Please implement the (static) RemoteControlCar.drive()  method");
+      if (battery <= 0) {
+        return;
+      }
+      distance += 20;
+      battery -= 1;
     }
 
     private int distance = 0;
