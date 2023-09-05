@@ -57,7 +57,6 @@ public class BankAccountTest {
         assertThat(bankAccount.getBalance()).isEqualTo(0);
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void cannotWithdrawMoneyFromEmptyAccount() {
         bankAccount.open();
@@ -67,7 +66,6 @@ public class BankAccountTest {
             .withMessage("Cannot withdraw money from an empty account");
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void cannotWithdrawMoreMoneyThanYouHave() throws BankAccountActionInvalidException {
         bankAccount.open();
