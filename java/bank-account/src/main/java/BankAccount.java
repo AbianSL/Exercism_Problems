@@ -12,12 +12,12 @@ class BankAccount {
       return balance;
     }
 
-    synchronized void deposit(int amount) throws BankAccountActionInvalidException {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+    synchronized void deposit(int amount) throws BankAccountActionInvalidException { 
+      balance += amount;
     }
 
     synchronized void withdraw(int amount) throws BankAccountActionInvalidException {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+      balance -= amount; 
     }
     
     private int balance;
