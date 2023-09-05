@@ -1,7 +1,7 @@
 class BankAccount {
 
     void open() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+      balance = 0;
     }
 
     void close() {
@@ -9,7 +9,7 @@ class BankAccount {
     }
 
     synchronized int getBalance() throws BankAccountActionInvalidException {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+      return balance;
     }
 
     synchronized void deposit(int amount) throws BankAccountActionInvalidException {
@@ -19,5 +19,6 @@ class BankAccount {
     synchronized void withdraw(int amount) throws BankAccountActionInvalidException {
         throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
     }
-
+    
+    private int balance;
 }
