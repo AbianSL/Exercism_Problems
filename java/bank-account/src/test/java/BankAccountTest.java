@@ -76,7 +76,6 @@ public class BankAccountTest {
             .withMessage("Cannot withdraw more money than is currently in the account");
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void cannotDepositNegativeAmount() {
         bankAccount.open();
@@ -86,7 +85,6 @@ public class BankAccountTest {
             .withMessage("Cannot deposit or withdraw negative amount");
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void cannotWithdrawNegativeAmount() throws BankAccountActionInvalidException {
         bankAccount.open();
@@ -97,7 +95,6 @@ public class BankAccountTest {
             .withMessage("Cannot deposit or withdraw negative amount");
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void cannotGetBalanceOfClosedAccount() throws BankAccountActionInvalidException {
         bankAccount.open();
