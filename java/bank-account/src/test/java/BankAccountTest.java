@@ -36,7 +36,6 @@ public class BankAccountTest {
         assertThat(bankAccount.getBalance()).isEqualTo(28);
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void canWithdrawMoney() throws BankAccountActionInvalidException {
         bankAccount.open();
@@ -47,7 +46,6 @@ public class BankAccountTest {
         assertThat(bankAccount.getBalance()).isEqualTo(5);
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void canWithdrawMoneySequentially() throws BankAccountActionInvalidException {
         bankAccount.open();
