@@ -4,16 +4,15 @@ import java.time.LocalTime;
 
 public class Gigasecond {
     public Gigasecond(LocalDate moment) {
-      moment_ = moment.atTime(0, 0); 
-      moment_.plusSeconds(1000000000);    // one Gigasecond added
+      moment_ = moment.atTime(0, 0);
     }
 
     public Gigasecond(LocalDateTime moment) {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+      moment_ = moment;
     }
 
     public LocalDateTime getDateTime() {
-      return moment_;
+      return moment_.plusSeconds(1000000000);  // one Gigasecond added
     }
   
   private LocalDateTime moment_;
