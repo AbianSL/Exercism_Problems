@@ -4,7 +4,7 @@ class Lasagna
   end
 
   def preparation_time_in_minutes(layers)
-    raise 'Please implement the Lasagna#preparation_time_in_minutes method'
+    layers * 2
   end
 
   def total_time_in_minutes(number_of_layers:, actual_minutes_in_oven:)
