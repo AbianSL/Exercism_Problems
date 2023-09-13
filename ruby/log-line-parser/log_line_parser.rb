@@ -4,7 +4,7 @@ class LogLineParser
   end
 
   def message
-    raise 'Please implement the LogLineParser#message method'
+    @line.split(':').last.strip
   end
 
   def log_level
