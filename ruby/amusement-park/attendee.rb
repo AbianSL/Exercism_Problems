@@ -1,10 +1,10 @@
 class Attendee
   def initialize(height)
-    raise 'Implement the Attendee#initialize method'
+    @height = height
   end
 
   def height
-    raise 'Implement the Attendee#height method'
+    @height
   end
 
   def pass_id
