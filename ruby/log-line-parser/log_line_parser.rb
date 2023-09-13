@@ -8,7 +8,7 @@ class LogLineParser
   end
 
   def log_level
-    raise 'Please implement the LogLineParser#log_level method'
+    @line.split(':')[0].gsub(/[\[\]]/, '').downcase 
   end
 
   def reformat
