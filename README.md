@@ -13,6 +13,6 @@ programming language that I'm learning about 2023-2024, like cpp and java, c, ko
 
 <img alt="Python_img" src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg" width=30px height=30px>[***Python***](python/)
 
-<img alt="Ruby_img" src="https://github.com/devicons/devicon/blob/master/icons/ruby/ruby-original.svg" width=30px height=30px>[***Ruby***](Ruby/)
+<img alt="Ruby_img" src="https://github.com/devicons/devicon/blob/master/icons/ruby/ruby-original.svg" width=30px height=30px>[***Ruby***](ruby/)
 
-<img alt="Prolog_img" src="img/file-type-prolog.svg" width=30px height=30px>[***Prolog***](Prolog/)
+<img alt="Prolog_img" src="img/file-type-prolog.svg" width=30px height=30px>[***Prolog***](prolog/)
