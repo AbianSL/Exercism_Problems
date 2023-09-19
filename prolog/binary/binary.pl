@@ -4,11 +4,7 @@ binary("1", 1).
 calculator([Digit|Rest], Len, Dec):-
   Len > 0,
   Len is Len - 1,
-  (Digit == '0' -> 
-    Bin is 0
-  
-    ; Bin is 1
-  ),
+  binary(Digit, Bin),
   Dec is Dec + Bin * (2 ** Len),
   calculator(Rest, Len, Dec).
 
