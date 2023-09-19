@@ -8,17 +8,19 @@ To get started with TDD, see the `README.md` file in your
 
 class Complement
   def self.of_dna(dna)
-    case dna
-    when 'G'
-      'C'
-    when 'C'
-      'G'
-    when 'T'
-      'A'
-    when 'A'
-      'U'
-    else
-      ''
+    result = ''
+    rna.each_char do |char| 
+      case char 
+      when 'G'
+        result += 'C'
+      when 'C'
+        result += 'G'
+      when 'T'
+        result += 'A'
+      when 'A'
+        result += 'U'
+      end
     end
+    result
   end
 end
