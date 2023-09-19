@@ -9,28 +9,28 @@ pending :-
     test(first, condition(true)) :-
         square(1, Result), Result == 1.
 
-    test(second, condition(pending)) :-
+    test(second, condition(true)) :-
         square(2, Result), Result == 2.
 
-    test(third, condition(pending)) :-
+    test(third, condition(true)) :-
         square(3, Result), Result == 4.
 
-    test(sixteen, condition(pending)) :-
+    test(sixteen, condition(true)) :-
         square(16, Result), Result == 32768.
 
-    test(twenty_three, condition(pending)) :-
+    test(twenty_three, condition(true)) :-
         square(23, Result), Result == 4194304.
 
-    test(thirty_two, condition(pending)) :-
+    test(thirty_two, condition(true)) :-
         square(32, Result), Result == 2147483648.
 
-    test(fifty_five, condition(pending)) :-
+    test(fifty_five, condition(true)) :-
         square(55, Result), Result == 18014398509481984.
 
-    test(sixty_four, condition(pending)) :-
+    test(sixty_four, condition(true)) :-
         square(64, Result), Result == 9223372036854775808.
 
-    test(total, condition(pending)) :-
+    test(total, condition(true)) :-
         total(Result), Result == 18446744073709551615.
 
     test(zero, [fail, condition(pending)]) :-
