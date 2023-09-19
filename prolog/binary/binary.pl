@@ -1,3 +1,6 @@
+binary("0", 0).
+binary("1", 1).
+
 calculator([Digit|Rest], Len, Dec):-
   Len > 0,
   Len is Len - 1,
@@ -15,5 +18,3 @@ binary(Str, Dec):-
   length(RevChars, Len),
   calculator(RevChars, Len, Dec).
 
-binary("0", 0).
-binary("1", 1).
