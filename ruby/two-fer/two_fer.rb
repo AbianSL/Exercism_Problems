@@ -4,8 +4,8 @@ Write your code for the 'Two Fer' exercise in this file. Make the tests in
 =end
 
 class TwoFer 
-  def two_fer(name= "you")
-    return "One for #{name}, one for me"
+  def self.two_fer(name= "you")
+    "One for #{name}, one for me."
   end
   
 end
