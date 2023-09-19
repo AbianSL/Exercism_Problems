@@ -8,19 +8,6 @@ To get started with TDD, see the `README.md` file in your
 
 class Complement
   def self.of_dna(dna)
-    result = ''
-    rna.each_char do |char| 
-      case char 
-      when 'G'
-        result += 'C'
-      when 'C'
-        result += 'G'
-      when 'T'
-        result += 'A'
-      when 'A'
-        result += 'U'
-      end
-    end
-    result
+    dna.tr('CATG', 'GUAC')
   end
 end
