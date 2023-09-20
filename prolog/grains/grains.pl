@@ -5,15 +5,15 @@ square(SquareNumber, Value):-
 
 calculate_to(1, Total):-
   square(1, Value),
-  Total is Value + Total.
+  NewTotal is Value + Total,
+  Total is NewTotal.
 
 calculate_to(SquareNumber, Total):-
   square(SquareNumber, Value),
-  Total is Value + Total,
-  calculate_to(SquareNumber - 1, Total).
+  NewTotal is Value + Total,
+  NewSquareNumber is SquareNumber - 1,
+  calculate_to(NewSquareNumber, NewTotal).
 
 total(Value):-
   Value is 0,
   calculate_to(64, Value).
-
-
