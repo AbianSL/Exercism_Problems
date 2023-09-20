@@ -11,7 +11,7 @@ calculate_to(SquareNumber, Total):-
   calculate_to(SquareNumber - 1, Total).
 
 total(Value):-
-  Values is 0,
+  Value is 0,
   calculate_to(64, Value).
 
 
