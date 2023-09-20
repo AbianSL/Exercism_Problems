@@ -21,10 +21,10 @@ class BirdWatcher {
     public boolean hasDayWithoutBirds() {
       for (int birds:birdsPerDay) {
         if (birds == 0) {
-          return false;
+          return true;
         }
       }
-      return true;
+      return false;
     }
 
     public int getCountForFirstDays(int numberOfDays) {
