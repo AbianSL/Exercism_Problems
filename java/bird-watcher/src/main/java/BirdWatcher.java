@@ -3,11 +3,11 @@ class BirdWatcher {
     private final int[] birdsPerDay;
 
     public BirdWatcher(int[] birdsPerDay) {
-        this.birdsPerDay = birdsPerDay.clone();
+      this.birdsPerDay = birdsPerDay.clone();
     }
 
     public int[] getLastWeek() {
-        throw new UnsupportedOperationException("Please implement the BirdCount.getLastWeek() method");
+      return this.birdsPerDay;
     }
 
     public int getToday() {
