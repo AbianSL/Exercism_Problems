@@ -6,9 +6,12 @@ square(SquareNumber, Value):-
 calculate_to(SquareNumber, Total):-
   SquareNumber > 0,
   SquareNumber =< 64,
+  square(SquareNumber, Value),
+  Total is Value + Total,
   calculate_to(SquareNumber - 1, Total).
 
 total(Value):-
+  Values i 0,
   calculate_to(64, Value).
 
 
