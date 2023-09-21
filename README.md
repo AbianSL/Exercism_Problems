@@ -13,7 +13,7 @@ That are programming language that I only practise it, and I consider that I kno
 
 <img alt="Python_img" src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg" width=30px height=30px>[***Python***](python/)
 
-<img alt="Bash_img" src="" width=30px height=30px>[***Bash***](bash/)
+<img alt="Bash_img" src="https://github.com/devicons/devicon/blob/master/icons/bash/bash-original.svg" width=30px height=30px>[***Bash***](bash/)
 
 ## Learning stage
 
