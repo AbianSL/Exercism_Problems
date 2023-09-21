@@ -28,6 +28,6 @@ and I didn't have any idea about them.
 
 <img alt="Prolog_img" src="img/file-type-prolog.svg" width=30px height=30px>[***Prolog***](prolog/)
 
-<img alt="awk_img" src="img/awk.svg" width=30px height=30px>[**awk***](awk/)
+<img alt="awk_img" src="img/awk.svg" width=30px height=30px>[***awk***](awk/)
 
 <img alt="Powershell_img" src="img/powershell.svg" width=30px height=30px>[***Powershell***](powershell/)
