@@ -5,7 +5,7 @@ programming language that I'm learning about 2023-2024, like cpp and java, c, ko
 
 ## Programming Languages:
 
-## Practise Stage
+### Practise Stage
 
 That are programming language that I only practise it, and I consider that I know
 
@@ -15,7 +15,7 @@ That are programming language that I only practise it, and I consider that I kno
 
 <img alt="Bash_img" src="https://github.com/devicons/devicon/blob/master/icons/bash/bash-original.svg" width=30px height=30px>[***Bash***](bash/)
 
-## Learning stage
+### Learning stage
 
 That are programming language that I consider that I didn't have the enough level or start learning 
 and I didn't have any idea about them.
