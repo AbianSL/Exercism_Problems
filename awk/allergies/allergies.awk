@@ -1,4 +1,36 @@
-BEGIN {
-    print "Implement this solution" > "/dev/stderr"
-    exit 1
+
+function allergent_score(allergent) {
+  if (allergent == "eggs") {
+    return 1
+  } else if (allergent == "peanuts") {
+    return 2
+  } else if (allergent == "shellfish") {
+    return 4
+  } else if (allergent == "strawberries") {
+    return 8
+  } else if (allergent == "tomatoes") {
+    return 16
+  } else if (allergent == "chocolate") {
+    return 32
+  } else if (allergent == "pollen") {
+    return 64
+  } else if (allergent == "cats") {
+    return 128
+  }
+  return -1 
+}
+
+function allergic_to(score, allergent) {
+  if (score - allergent_score(allergent) >= 0) {
+    print("true")
+  } else {
+    print("false")
+  }
+}
+
+{
+  split($0, opcode, ",")
+  if (opcode[1] == "allergic_to") {
+    allergic_to(opcode[0], opcode[2])
+  }
 }
