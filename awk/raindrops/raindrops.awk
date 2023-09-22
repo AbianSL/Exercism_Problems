@@ -2,6 +2,14 @@
 # - num
 
 BEGIN {
-    print "Implement this solution" > "/dev/stderr"
-    exit 1
+  result = ""
+  if (num % 3 == 0) {
+    result = "Pling"
+  } else if (num % 5 == 0) {
+    result = result + "Plang"
+  } else if(num % 7 == 0) {
+    result = result + "Plong"
+  } else {
+    result = num
+  }
 }
