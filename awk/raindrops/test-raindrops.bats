@@ -9,14 +9,14 @@ load bats-extra
 }
 
 @test "the sound for 3 is Pling" {
-  [[ $BATS_RUN_SKIPPED == "true" ]] || skip
+  #[[ $BATS_RUN_SKIPPED == "true" ]] || skip
   run gawk -v num=3 -f raindrops.awk
   assert_success
   assert_output "Pling"
 }
 
 @test "the sound for 5 is Plang" {
-  [[ $BATS_RUN_SKIPPED == "true" ]] || skip
+  #[[ $BATS_RUN_SKIPPED == "true" ]] || skip
   run gawk -v num=5 -f raindrops.awk
   assert_success
   assert_output "Plang"
