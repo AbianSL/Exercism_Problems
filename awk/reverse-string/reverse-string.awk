@@ -1,4 +1,6 @@
 BEGIN {
-    print "Implement this solution" > "/dev/stderr"
-    exit 1
+  split($0, words, " ")
+  for (i = length(words); i >= 0; i--) {
+    print(words[i])
+  }
 }
