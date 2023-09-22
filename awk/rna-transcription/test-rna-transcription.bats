@@ -53,14 +53,14 @@ load bats-extra
 }
 
 @test "Handles completely invalid string" {
-  [[ $BATS_RUN_SKIPPED == "true" ]] || skip
+  #[[ $BATS_RUN_SKIPPED == "true" ]] || skip
   run gawk -f rna-transcription.awk <<< "XXXX"
   assert_failure
   assert_output "Invalid nucleotide detected."
 }
 
 @test "Handles partially invalid string" {
-  [[ $BATS_RUN_SKIPPED == "true" ]] || skip
+  #[[ $BATS_RUN_SKIPPED == "true" ]] || skip
   run gawk -f rna-transcription.awk <<< "ACGTXCTTAA"
   assert_failure
   assert_output "Invalid nucleotide detected."
