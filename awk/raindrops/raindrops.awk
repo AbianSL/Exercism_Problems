@@ -12,4 +12,5 @@ BEGIN {
   } else {
     result = num
   }
+  print result
 }
