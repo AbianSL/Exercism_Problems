@@ -12,7 +12,6 @@ load bats-extra
 }
 
 @test "a word" {
-  [[ $BATS_RUN_SKIPPED == "true" ]] || skip
   run gawk -f reverse-string.awk <<< "robot"
 
   assert_success
