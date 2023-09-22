@@ -33,14 +33,12 @@ teardown() {
 }
 
 @test "empty file given" {
-  [[ $BATS_RUN_SKIPPED == "true" ]] || skip
   run gawk -f two-fer.awk empty.txt
   assert_success
   assert_output "One for you, one for me."
 }
 
 @test "a name given" {
-  [[ $BATS_RUN_SKIPPED == "true" ]] || skip
   run gawk -f two-fer.awk one.txt
   assert_success
   assert_output "One for Alice, one for me."

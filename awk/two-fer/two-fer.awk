@@ -1,3 +1,5 @@
-BEGIN {
-  print "One for you, one for me." 
-}
+BEGIN {name = "you"}
+
+NF {name = $0}
+
+END {print "One for " name ", one for me."}
