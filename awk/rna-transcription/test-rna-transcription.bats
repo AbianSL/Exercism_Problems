@@ -11,7 +11,7 @@ load bats-extra
 }
 
 @test "RNA complement of cytosine is guanine" {
-  [[ $BATS_RUN_SKIPPED == "true" ]] || skip
+  #[[ $BATS_RUN_SKIPPED == "true" ]] || skip
   run gawk -f rna-transcription.awk <<< "C"
   assert_success
   assert_output "G"
