@@ -45,7 +45,6 @@ teardown() {
 }
 
 @test "name with a space" {
-  [[ $BATS_RUN_SKIPPED == "true" ]] || skip
   run gawk -f two-fer.awk <<< "Mary Ann"
   assert_success
   assert_output "One for Mary Ann, one for me."
