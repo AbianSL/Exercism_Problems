@@ -1,4 +1,4 @@
-BEGIN {
+{
   result = ""
   split($0, dna_seq, "")
   for (i = 0; i < length(dna_seq); ++i) {
