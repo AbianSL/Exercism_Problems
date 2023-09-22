@@ -18,28 +18,28 @@ load bats-extra
 }
 
 @test "RNA complement of guanine is cytosine" {
-  [[ $BATS_RUN_SKIPPED == "true" ]] || skip
+  #[[ $BATS_RUN_SKIPPED == "true" ]] || skip
   run gawk -f rna-transcription.awk <<< "G"
   assert_success
   assert_output "C"
 }
 
 @test "RNA complement of thymine is adenine" {
-  [[ $BATS_RUN_SKIPPED == "true" ]] || skip
+  #[[ $BATS_RUN_SKIPPED == "true" ]] || skip
   run gawk -f rna-transcription.awk <<< "T"
   assert_success
   assert_output "A"
 }
 
 @test "RNA complement of adenine is uracil" {
-  [[ $BATS_RUN_SKIPPED == "true" ]] || skip
+  #[[ $BATS_RUN_SKIPPED == "true" ]] || skip
   run gawk -f rna-transcription.awk <<< "A"
   assert_success
   assert_output "U"
 }
 
 @test "RNA complement" {
-  [[ $BATS_RUN_SKIPPED == "true" ]] || skip
+  #[[ $BATS_RUN_SKIPPED == "true" ]] || skip
   run gawk -f rna-transcription.awk <<< "ACGTGGTCTTAA"
   assert_success
   assert_output "UGCACCAGAAUU"

@@ -3,7 +3,7 @@
   split($0, dna_seq, "")
   for (i = 0; i < length(dna_seq); ++i) {
     if (dna_seq[i] == "A") {
-      result = result "T"
+      result = result "U"
     } else if (dna_seq[i] == "T") {
       result = result "A"
     } else if (dna_seq[i] == "C") {
