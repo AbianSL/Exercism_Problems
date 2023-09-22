@@ -19,7 +19,6 @@ load bats-extra
 }
 
 @test "a capitalised word" {
-  [[ $BATS_RUN_SKIPPED == "true" ]] || skip
   run gawk -f reverse-string.awk <<< "Ramen"
 
   assert_success
@@ -27,7 +26,6 @@ load bats-extra
 }
 
 @test "a sentence with punctuation" {
-  [[ $BATS_RUN_SKIPPED == "true" ]] || skip
   run gawk -f reverse-string.awk <<< "I'm hungry!"
 
   assert_success
@@ -35,7 +33,6 @@ load bats-extra
 }
 
 @test "a palindrome" {
-  [[ $BATS_RUN_SKIPPED == "true" ]] || skip
   run gawk -f reverse-string.awk <<< "racecar"
 
   assert_success
@@ -43,7 +40,6 @@ load bats-extra
 }
 
 @test "an even-sized word" {
-  [[ $BATS_RUN_SKIPPED == "true" ]] || skip
   run gawk -f reverse-string.awk <<< "drawer"
 
   assert_success
