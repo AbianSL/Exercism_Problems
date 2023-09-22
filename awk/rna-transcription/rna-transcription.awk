@@ -10,7 +10,12 @@
       result = result "G"
     } else if (dna_seq[i] == "G") {
       result = result "C"
-    } 
+    } else if (dna_seq[i] == "") {
+      continue
+    } else {
+      print "Invalid nucleotide detected."
+      exit 1
+    }
   }
   print result
 }

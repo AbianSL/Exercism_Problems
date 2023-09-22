@@ -46,7 +46,7 @@ load bats-extra
 }
 
 @test "Handles invalid character" {
-  [[ $BATS_RUN_SKIPPED == "true" ]] || skip
+  #[[ $BATS_RUN_SKIPPED == "true" ]] || skip
   run gawk -f rna-transcription.awk <<< "ACGTXCTTA"
   assert_failure
   assert_output "Invalid nucleotide detected."
