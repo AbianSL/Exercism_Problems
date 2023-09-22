@@ -1,11 +1,9 @@
 BEGIN {
-  if (ARGC == 2) {
-    getline phrase < ARGV[1] 
-  }
 }
 
 END { 
-  for (i = length(phrase); i >= 0; i--) {
-    print phrase[i]
+  split($0, words, "")
+  for (i = length(words); i >= 0; i--) {
+    printf words[i]
   }
 }
