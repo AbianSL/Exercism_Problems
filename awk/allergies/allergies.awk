@@ -10,9 +10,17 @@ BEGIN {
   } 
 }
 
+function ignore_high_score(score) {
+  while (score > 255) {
+    score = score - 256
+  }
+  return score
+}
+
 function list_score(score) {
   result = ""
   value = 128
+  score = ignore_high_score(score) 
   while (value > 0) {
     if (score >= value && allergent_name(value) != "") {
       result = allergent_name(value) "," result 
