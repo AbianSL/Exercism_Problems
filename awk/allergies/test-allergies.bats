@@ -30,7 +30,7 @@ load bats-extra
 }
 
 @test 'peanuts: not allergic to anything' {
-    [[ $BATS_RUN_SKIPPED == "true" ]] || skip
+    #[[ $BATS_RUN_SKIPPED == "true" ]] || skip
     run gawk -f allergies.awk <<< '0,allergic_to,peanuts'
     assert_success
     assert_output "false"
@@ -57,7 +57,7 @@ load bats-extra
 }
 
 @test 'shellfish: not allergic to anything' {
-    [[ $BATS_RUN_SKIPPED == "true" ]] || skip
+    #[[ $BATS_RUN_SKIPPED == "true" ]] || skip
     run gawk -f allergies.awk <<< '0,allergic_to,shellfish'
     assert_success
     assert_output "false"
@@ -84,7 +84,7 @@ load bats-extra
 }
 
 @test 'strawberries: not allergic to anything' {
-    [[ $BATS_RUN_SKIPPED == "true" ]] || skip
+    #[[ $BATS_RUN_SKIPPED == "true" ]] || skip
     run gawk -f allergies.awk <<< '0,allergic_to,strawberries'
     assert_success
     assert_output "false"
@@ -111,7 +111,7 @@ load bats-extra
 }
 
 @test 'tomatoes: not allergic to anything' {
-    [[ $BATS_RUN_SKIPPED == "true" ]] || skip
+    #[[ $BATS_RUN_SKIPPED == "true" ]] || skip
     run gawk -f allergies.awk <<< '0,allergic_to,tomatoes'
     assert_success
     assert_output "false"
@@ -138,7 +138,7 @@ load bats-extra
 }
 
 @test 'chocolate: not allergic to anything' {
-    [[ $BATS_RUN_SKIPPED == "true" ]] || skip
+    #[[ $BATS_RUN_SKIPPED == "true" ]] || skip
     run gawk -f allergies.awk <<< '0,allergic_to,chocolate'
     assert_success
     assert_output "false"
@@ -165,7 +165,7 @@ load bats-extra
 }
 
 @test 'pollen: not allergic to anything' {
-    [[ $BATS_RUN_SKIPPED == "true" ]] || skip
+    #[[ $BATS_RUN_SKIPPED == "true" ]] || skip
     run gawk -f allergies.awk <<< '0,allergic_to,pollen'
     assert_success
     assert_output "false"
@@ -192,7 +192,7 @@ load bats-extra
 }
 
 @test 'cats: not allergic to anything' {
-    [[ $BATS_RUN_SKIPPED == "true" ]] || skip
+    #[[ $BATS_RUN_SKIPPED == "true" ]] || skip
     run gawk -f allergies.awk <<< '0,allergic_to,cats'
     assert_success
     assert_output "false"
