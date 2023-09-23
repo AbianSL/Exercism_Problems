@@ -5,7 +5,9 @@ BEGIN {
 { 
   if ($2 == "allergic_to") {
     allergic_to($1, $3)
-  }
+  } else if ($2 == "list") {
+    list_score($1)
+  } 
 }
 
 function list_score(score) {
