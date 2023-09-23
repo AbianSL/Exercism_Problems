@@ -13,17 +13,15 @@ BEGIN {
 function list_score(score) {
   result = ""
   value = 128
-  first = 1
   while (value > 0) {
     if (score >= value && allergent_name(value) != "") {
-      result = result "," allergent_name(value)
-      if (first) {
-        gsub(",", "", result)
-      }
+      result = allergent_name(value) "," result 
       score = score - value
     }
     value = value / 2
   }
+  
+  sub(/,$/, "", result)
 
   return result
 }
