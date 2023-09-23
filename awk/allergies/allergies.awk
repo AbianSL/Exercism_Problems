@@ -30,8 +30,9 @@ function allergent_score(allergent) {
 }
 
 function allergic_to(score, allergent) {
-  substract = score - allergent_score(allergent)
-  if (substract >= 0 && substract % 2 == 0) {
+  value = allergent_score(allergent)
+  substract = score - value 
+  if (substract >= 0 && (substract > value || substract == 0)) {
     print("true")
   } else {
     print("false")
