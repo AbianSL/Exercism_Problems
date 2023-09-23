@@ -1,3 +1,12 @@
+BEGIN {
+  FS = ","
+}
+
+{ 
+  if ($2 == "allergic_to") {
+    allergic_to($1, $3)
+  }
+}
 
 function allergent_score(allergent) {
   if (allergent == "eggs") {
@@ -28,9 +37,4 @@ function allergic_to(score, allergent) {
   }
 }
 
-{
-  split($0, opcode, ",")
-  if (opcode[1] == "allergic_to") {
-    allergic_to(opcode[0], opcode[2])
-  }
-}
+
