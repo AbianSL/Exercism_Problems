@@ -4,18 +4,22 @@ BEGIN {
 
 { 
   if ($2 == "allergic_to") {
-    allergic_to($1, $3)
+    print allergic_to($1, $3)
   } else if ($2 == "list") {
-    list_score($1)
+    print list_score($1)
   } 
 }
 
 function list_score(score) {
   result = ""
   value = 128
+  first = 1
   while (value > 0) {
-    if (score >= value) {
+    if (score >= value && allergent_name(value) != "") {
       result = result "," allergent_name(value)
+      if (first) {
+        gsub(",", "", result)
+      }
       score = score - value
     }
     value = value / 2
@@ -42,6 +46,7 @@ function allergent_name(score) {
   } else if (score == 128) {
     return "cats"
   }
+  return ""
 }
 
 function allergent_score(allergent) {
