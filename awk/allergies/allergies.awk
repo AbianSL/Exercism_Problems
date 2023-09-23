@@ -8,6 +8,40 @@ BEGIN {
   }
 }
 
+function list_score(score) {
+  result = ""
+  value = 128
+  while (value > 0) {
+    if (score >= value) {
+      result = result "," allergent_name(value)
+      score = score - value
+    }
+    value = value / 2
+  }
+
+  return result
+}
+
+function allergent_name(score) {
+  if (score == 1) {
+    return "eggs"
+  } else if (score == 2) {
+    return "peanuts"
+  } else if (score == 4) {
+    return "shellfish"
+  } else if (score == 8) {
+    return "strawberries"
+  } else if (score == 16) {
+    return "tomatoes"
+  } else if (score == 32) {
+    return "chocolate"
+  } else if (score == 64) {
+    return "pollen"
+  } else if (score == 128) {
+    return "cats"
+  }
+}
+
 function allergent_score(allergent) {
   if (allergent == "eggs") {
     return 1
@@ -32,7 +66,9 @@ function allergent_score(allergent) {
 function allergic_to(score, allergent) {
   value = allergent_score(allergent)
   substract = score - value 
-  if (substract >= 0 && (substract > value || substract == 0)) {
+  if (substract >= 0 && 
+      (substract > value || substract == 0) && 
+      (2 * value < score || value == score)) {
     print("true")
   } else {
     print("false")
