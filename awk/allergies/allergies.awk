@@ -1,4 +1,13 @@
 BEGIN {
+  allergens["eggs"] = 1
+  allergens["peanuts"] = 2
+  allergens["shellfish"] = 4
+  allergens["strawberries"] = 8
+  allergens["tomatoes"] = 16
+  allergens["chocolate"] = 32
+  allergens["pollen"] = 64
+  allergens["cats"] = 128
+
   FS = ","
 }
 
@@ -35,45 +44,12 @@ function list_score(score) {
 }
 
 function allergent_name(score) {
-  if (score == 1) {
-    return "eggs"
-  } else if (score == 2) {
-    return "peanuts"
-  } else if (score == 4) {
-    return "shellfish"
-  } else if (score == 8) {
-    return "strawberries"
-  } else if (score == 16) {
-    return "tomatoes"
-  } else if (score == 32) {
-    return "chocolate"
-  } else if (score == 64) {
-    return "pollen"
-  } else if (score == 128) {
-    return "cats"
+  for (allergent in allergens) {
+    if (allergens[allergent] == score) {
+      return allergent
+    }
   }
   return ""
-}
-
-function allergent_score(allergent) {
-  if (allergent == "eggs") {
-    return 1
-  } else if (allergent == "peanuts") {
-    return 2
-  } else if (allergent == "shellfish") {
-    return 4
-  } else if (allergent == "strawberries") {
-    return 8
-  } else if (allergent == "tomatoes") {
-    return 16
-  } else if (allergent == "chocolate") {
-    return 32
-  } else if (allergent == "pollen") {
-    return 64
-  } else if (allergent == "cats") {
-    return 128
-  }
-  return -1 
 }
 
 function in_list(score, allergent) {
@@ -94,5 +70,3 @@ function allergic_to(score, allergent) {
     return "false"
   }
 }
-
-
