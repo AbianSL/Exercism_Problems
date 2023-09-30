@@ -43,14 +43,14 @@ load bats-extra
 # https://www.gnu.org/software/bash/manual/bash.html#Shell-Expansions
 
 @test "handle arg with spaces" {
-  [[ $BATS_RUN_SKIPPED == "true" ]] || skip
+  # [[ $BATS_RUN_SKIPPED == "true" ]] || skip
   run bash two_fer.sh "John Smith" "Mary Ann"
   assert_success
   assert_output "One for John Smith, one for me."
 }
 
 @test "handle arg with glob char" {
-  [[ $BATS_RUN_SKIPPED == "true" ]] || skip
+  #[[ $BATS_RUN_SKIPPED == "true" ]] || skip
   run bash two_fer.sh "* "
   assert_success
   assert_output "One for * , one for me."

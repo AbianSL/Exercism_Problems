@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 main() {
-  variable=$1
+  variable=$@
   if [ "$variable" == "" ]; then
     variable="you"
   fi
   echo "One for ${variable}, one for me."
 }
 
-main $1
+main "${@:1}" 
