@@ -8,4 +8,4 @@ main() {
   echo "One for ${variable}, one for me."
 }
 
-main
+main $1
