@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 main() {
-  variable=$@
+  variable="$*"
   if [ "$variable" == "" ]; then
     variable="you"
   fi
