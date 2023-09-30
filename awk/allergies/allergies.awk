@@ -55,7 +55,7 @@ function allergent_name(score) {
 function in_list(score, allergent) {
   split(list_score(score), list, ",")
   founded = 0
-  for (i = 0; i < length(list); i++) {
+  for (i in list) {
     if (list[i] == allergent) {
       founded = 1
     }
