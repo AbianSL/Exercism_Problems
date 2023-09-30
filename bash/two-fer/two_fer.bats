@@ -25,14 +25,14 @@ load bats-extra
 }
 
 @test "a name given" {
-  [[ $BATS_RUN_SKIPPED == "true" ]] || skip
+  #[[ $BATS_RUN_SKIPPED == "true" ]] || skip
   run bash two_fer.sh Alice
   assert_success
   assert_output "One for Alice, one for me."
 }
 
 @test "another name given" {
-  [[ $BATS_RUN_SKIPPED == "true" ]] || skip
+  #[[ $BATS_RUN_SKIPPED == "true" ]] || skip
   run bash two_fer.sh Bob
   assert_success
   assert_output "One for Bob, one for me."

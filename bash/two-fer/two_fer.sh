@@ -2,7 +2,10 @@
 
 main() {
   variable=$1
-  echo "One for ${variable:-you}, one for me."
+  if [ "$variable" == "" ]; then
+    variable="you"
+  fi
+  echo "One for ${variable}, one for me."
 }
 
 main
