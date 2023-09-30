@@ -31,7 +31,7 @@ function list_score(score) {
   value = 128
   score = ignore_high_score(score) 
   while (value > 0) {
-    if (score >= value && allergent_name(value) != "") {
+    if (score >= value) {
       result = allergent_name(value) "," result 
       score = score - value
     }
