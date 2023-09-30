@@ -54,19 +54,14 @@ function allergent_name(score) {
 
 function in_list(score, allergent) {
   split(list_score(score), list, ",")
-  founded = 0
   for (i in list) {
     if (list[i] == allergent) {
-      founded = 1
+      return 1
     }
   }
-  return founded
+  return 0 
 }
 
 function allergic_to(score, allergent) {
-  if (in_list(score, allergent) == 1) {
-    return "true"
-  } else {
-    return "false"
-  }
+  in_list(score, allergent) ? "true": "false"
 }
