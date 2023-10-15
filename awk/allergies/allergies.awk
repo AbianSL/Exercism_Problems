@@ -19,23 +19,15 @@ BEGIN {
   } 
 }
 
-function ignore_high_score(score) {
-  while (score > 255) {
-    score = score - 256
-  }
-  return score
-}
-
 function list_score(score) {
   result = ""
   value = 128
-  score = ignore_high_score(score) 
-  while (value > 0) {
+  score %= 256 
+  for (;value > 0; value /= 2) {
     if (score >= value) {
       result = allergent_name(value) "," result 
       score = score - value
     }
-    value = value / 2
   }
   
   sub(/,$/, "", result)
@@ -43,25 +35,22 @@ function list_score(score) {
   return result
 }
 
-function allergent_name(score) {
-  for (allergent in allergens) {
-    if (allergens[allergent] == score) {
-      return allergent
-    }
-  }
+function indexOf(arr, val) {
+  for (idx in arr)
+    if (arr[idx] == val)
+      return idx
   return ""
+}
+
+function allergent_name(score) {
+  return indexOf(allergens, score)
 }
 
 function in_list(score, allergent) {
   split(list_score(score), list, ",")
-  for (i in list) {
-    if (list[i] == allergent) {
-      return 1
-    }
-  }
-  return 0 
+  return indexOf(list, allergent) != "" ? 1 : 0
 }
 
 function allergic_to(score, allergent) {
-  in_list(score, allergent) ? "true": "false"
+  return in_list(score, allergent) ? "true": "false"
 }
